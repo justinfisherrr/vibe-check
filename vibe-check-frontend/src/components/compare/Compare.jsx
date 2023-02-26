@@ -49,7 +49,7 @@ function Compare() {
 			sendRequest(dataToSend);
 		}
 		setAllowedToSend(false);
-	}, [dataToSend, allowedToSend, setAnimationData]);
+	}, [dataToSend, allowedToSend, setAnimationData, username]);
 
 	function handleSend(input) {
 		setAllowedToSend(true);
