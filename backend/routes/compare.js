@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const addUser = require("../helpers/addUser");
+const matchMaker = require("../helpers/matchMaker");
 const mongoose = require("mongoose");
 const User = require("../models/user");
 
@@ -10,18 +10,18 @@ router.post("/compare", async (req, res) => {
     const requestedUsername = req.body.other_username;
 
     const requestedUser = await User.findOne({
-      user_info: { username: requestedUsername },
+      "user_info.username": requestedUsername,
     });
+
     const originalUser = await User.findOne({
-      user_info: { username: originalUsername },
+      "user_info.username": originalUsername,
     });
 
     if (requestedUser) {
-      console.log(requestedUser, originalUser);
-      console.log("User found");
-      res.send(user);
+      //At this point we have both users. We compare them
+      const matchedObject = matchMaker(originalUser, requestedUser);
+      res.send(matchedObject);
     } else {
-      console.log("user not found");
       res.send({ userExists: false });
     }
   } catch (error) {
