@@ -8,10 +8,11 @@ async function addUser() {
     //Parse the data first
     const parsedData = await spotifyParse();
     const foundProfile = await User.findOne({
-      username: parsedData.user_data.name,
+      username: parsedData.user_info.user_id,
     });
 
     if (foundProfile) {
+      console.log("user already exists");
       await User.findOneAndUpdate(parsedData);
     } else {
       const user = new User(parsedData);

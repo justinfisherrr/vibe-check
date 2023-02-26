@@ -1,4 +1,4 @@
-const SpotifyObject = require('./SpotifyObject');
+const SpotifyObject = require("./SpotifyObject");
 async function spotifyParse() {
   const spotifyApi = SpotifyObject.getSpotifyObject();
   let parsedUser = {
@@ -8,6 +8,7 @@ async function spotifyParse() {
 
   try {
     const userInfo = await spotifyApi.getMe();
+    parsedUser.user_info.user_id = userInfo.body.id;
     parsedUser.user_info.username = userInfo.body.display_name;
     parsedUser.user_info.profile_img = userInfo.body.images[0].url;
 
@@ -43,6 +44,7 @@ async function spotifyParse() {
   } catch (error) {
     console.log(error);
   }
+
   return parsedUser;
 }
 module.exports = spotifyParse;
