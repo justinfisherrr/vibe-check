@@ -7,9 +7,9 @@ async function addUser() {
   try {
     //Parse the data first
     const parsedData = await spotifyParse();
-    // console.log(parsedData);
-    // const user = new User(parsedData);
-    // await user.save();
+    console.log(parsedData);
+    const user = new User(parsedData);
+    await user.save();
   } catch (error) {
     console.log(error, 'Found in addUser');
   }
