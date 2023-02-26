@@ -6,13 +6,22 @@ const User = require("../models/user");
 
 router.post("/compare", async (req, res) => {
   try {
-    console.log(req.body.username);
-    const user = await User.findOne({
-      user_info: { username: req.body.username },
+    const originalUsername = req.body.my_username;
+    const requestedUsername = req.body.other_username;
+
+    const requestedUser = await User.findOne({
+      user_info: { username: requestedUsername },
     });
-    if (user) {
+    const originalUser = await User.findOne({
+      user_info: { username: originalUsername },
+    });
+
+    if (requestedUser) {
+      console.log(requestedUser, originalUser);
+      console.log("User found");
       res.send(user);
     } else {
+      console.log("user not found");
       res.send({ userExists: false });
     }
   } catch (error) {
