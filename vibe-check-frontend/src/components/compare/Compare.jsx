@@ -31,12 +31,12 @@ function Compare() {
 				const body = {
 					username: dataToSend,
 				};
-				const header = {
-					headers: {
-						'Content-Type': 'application/json',
-					},
-				};
-				const res = await axios.post('/compare', body, header);
+				// const header = {
+				// 	headers: {
+				// 		'Content-Type': 'application/json',
+				// 	},
+				// };
+				const res = await axios.post('http://localhost:5000/compare', body);
                 // const userData = res.data;
 				console.log(res);
 				setAnimationData(userData);
