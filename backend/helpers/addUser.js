@@ -10,7 +10,6 @@ async function addUser() {
     const foundProfile = await User.findOne({
       "user_info.username": parsedData.user_info.username,
     });
-    console.log(foundProfile);
     if (foundProfile) {
       await User.findOneAndUpdate(parsedData);
     } else {
