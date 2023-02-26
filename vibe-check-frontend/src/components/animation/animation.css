@@ -1,11 +1,46 @@
 .animation-page{
-    background-color: #9e1e37;
+    
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.buttons{
+    position: absolute;
+    bottom: 50px;
+}
+
+.right-button{
+    margin-right: 5px;
+    color: black;
+}
+
+.left-button{
+    margin-left: 5px;
+    color: black;
+}
+
+.animation-page-0{
+    background-color: #9e1e37;
+}
+
+.animation-page-1{
+    background-color: #a4d3bf;
+}
+
+.animation-page-2{
+    background-color: #1e4b9e;
+}
+
+.animation-page-3{
+    background-color: #e788c2;
+}
+
+.animation-page-4{
+    background-color: #96efb7;
 }
 
 .screens{

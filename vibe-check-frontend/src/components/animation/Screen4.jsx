@@ -1,20 +1,18 @@
 import React from 'react';
 
 function Screen4({animationData}){
-    <div className='screen3-content'>
+    return <div className='screen screen4-content'>
                 <div className='artist-covers'>
-                    {/* {animationData.screen3.artist[0].name} */}
-                    {animationData.screen3.artist.map((artistObj, index) => {
-                        return <div className={`artist-img-wrapper artist-img-wrapper-${index+1}`}>
-                                <img className="artist-img" src={artistObj.image} alt=""></img>
+                    {animationData.screen4.song.map((songObj, index) => {
+                        return <div className={`overlap-img-wrapper overlap-img-wrapper-${index+1}`}>
+                                <img className="song-img" src={songObj.song_img} alt=""></img>
                             </div>
                     })}
                 </div>
-                <h1 className='titles screen3-title'>MATCHING ARTISTS ARE</h1>
+                <h1 className='titles screen4-title'>MATCHING SONGS ARE</h1>
                 <div className='artist-names'>
-                    {/* {animationData.screen3.artist[0].name} */}
-                    {animationData.screen3.artist.map((artistObj) => {
-                        return <p className="artist-name sub-texts">• {artistObj.name}</p>
+                    {animationData.screen4.song.map((songObj) => {
+                        return <p className="artist-name sub-texts">• {songObj.song_name}</p>
                     })}
                 </div>
             </div>

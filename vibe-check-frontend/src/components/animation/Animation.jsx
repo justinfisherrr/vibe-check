@@ -1,6 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import {animationContext} from '../../context/animationContext';
 import './animation.css';
+import Stiple1 from '../stiple/Stiple1';
+import Stiple2 from '../stiple/Stiple2';
+import Stiple3 from '../stiple/Stiple3';
+import Stiple4 from '../stiple/Stiple4';
 
 import Screen1 from './Screen1';
 import Screen2 from './Screen2';
@@ -8,10 +12,6 @@ import Screen3 from './Screen3';
 import Screen4 from './Screen4';
 import Screen5 from './Screen5';
 
-import img1 from '../../images/Stiple1-purple.png'
-import img2 from '../../images/Stiple2-purple.png'
-import img3 from '../../images/Stiple3-purple.png'
-import img4 from '../../images/Stiple4-purple.png'
 import star from '../../images/star.png'
 import waves from '../../images/waves.svg'
 
@@ -44,32 +44,24 @@ import waves from '../../images/waves.svg'
         console.log(animationData);
     }, [animationData])
     
-    return <div className='animation-page'>
+    return <div className={`animation-page animation-page-${currentScreen}`}>
         <img className="waves" src={waves} alt="" />
-        <div className='stiple stiple1'>
-            <img src={img1} alt="" />
-        </div>
-        <div className='stiple stiple2'>
-            <img src={img2} alt="" />
-        </div>
-        <div className='stiple stiple3'>
-            <img src={img3} alt="" />
-        </div>
-        <div className='stiple stiple4'>
-            <img src={img4} alt="" />
-        </div>
+        <Stiple1 currentScreen={currentScreen}/>
+        <Stiple2 currentScreen={currentScreen}/>
+        <Stiple3 currentScreen={currentScreen}/>
+        <Stiple4 currentScreen={currentScreen}/>
         <div className='stiple star star1'>
-			<img src={star} alt="" />
-		</div>
-        <div className='stiple star star2'>
-            <img src={star} alt="" />
-        </div>
+				<img src={star} alt="" />
+			</div>
+			<div className='stiple star star2'>
+				<img src={star} alt="" />
+			</div>
         <div className="screens">
             {screens[currentScreen]}
         </div>
         <div className='buttons'>
-            <button onClick={() => prevScreen()}>prev</button>
-            <button className="button" onClick={() => nextScreen()}>next</button>
+            <button  className="button right-button" onClick={() => prevScreen()}>prev</button>
+            <button className="button left-button" onClick={() => nextScreen()}>next</button>
         </div>
     </div>
 } 

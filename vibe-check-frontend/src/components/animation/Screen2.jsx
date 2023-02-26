@@ -1,10 +1,10 @@
 import React from 'react';
 
 function Screen2({animationData}){
-    return <div className="screen2-content">
+    return <div className="screen screen2-content">
         <h1 className='titles screen2-title'>MATCHING GENRES ARE</h1>
          <ul className='genre-list'>
-            {animationData.screen2.genre.map((genre) => 
+            {animationData.screen2.genres.map((genre) => 
                 <li className='genre sub-texts'>• {genre}</li>)
             }
         </ul> 

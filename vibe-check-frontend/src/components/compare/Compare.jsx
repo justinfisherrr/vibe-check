@@ -39,8 +39,9 @@ function Compare() {
 					},
 				};
 				const res = await axios.post('http://localhost:5000/compare', body, header);
-				setAnimationData(userData);
-				setResponseData(userData);
+				console.log(res.data);
+				setAnimationData(res.data);
+				setResponseData(res.data);
 			} catch (err) {
 				console.log(err);
 			}
