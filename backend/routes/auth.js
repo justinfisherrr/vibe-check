@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const SpotifyObject = require('../helpers/spotifyObject');
+const SpotifyObject = require('../helpers/SpotifyObject');
+const addUser = require('../helpers/addUser');
 
 const client_id = process.env.CLIENT_ID;
 const client_secret = process.env.CLIENT_SECRET;
@@ -62,7 +63,8 @@ router.get('/callback', async (req, res) => {
 
     spotifyApi.setAccessToken(access_token);
     spotifyApi.setRefreshToken(refresh_token);
-
+    //Adds user to database
+    await addUser();
     // Redirect user
     const url =
       process.env.NODE_ENV === 'production'
