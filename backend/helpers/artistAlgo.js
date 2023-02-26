@@ -3,14 +3,36 @@ function getTopArtists(user1, user2) {
   let user2Arr = user2.user_data.top_artists;
 
   let fullWeightedArr = compareArtists(user1Arr, user2Arr);
+  if (fullWeightedArr.length === 0) {
+    fullWeightedArr.push({
+      artist_name: '',
+      weight: -1,
+    });
+  }
+
+  let t = 0;
+  while (fullWeightedArr.length < 5) {
+    let currentArtistName = user2Arr[t].artist_name;
+    if (fullWeightedArr.some((e) => e.artist_name !== currentArtistName)) {
+      fullWeightedArr.push({
+        artist_name: currentArtistName,
+        weight: 0,
+      });
+    }
+    t++;
+  }
+
   let top5Arr = [];
   for (let i = 0; i < 5; i++) {
     let artistName = fullWeightedArr[i].artist_name;
-    for (let k = 0; k < user1Arr.length; ++k) {
-      if (user1Arr[k].artist_name === artistName) {
+
+    for (let k = 0; k < user2Arr.length; ++k) {
+      if (user2Arr[k].artist_name === artistName) {
         top5Arr.push({
-          artist_name: user1Arr[k].artist_name,
-          artist_images: user1Arr[k].artist_img,
+          artist_name: user2Arr[k].artist_name.concat(
+            `${fullWeightedArr[i].weight === 0 ? '*' : ''}`
+          ),
+          artist_images: user2Arr[k].artist_img,
         });
       }
     }

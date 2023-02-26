@@ -3,14 +3,38 @@ function getTopSong(user1, user2) {
   let user2Arr = user2.user_data.top_songs;
 
   let fullWeightedArr = compareSongs(user1Arr, user2Arr);
+  if (fullWeightedArr.length === 0) {
+    fullWeightedArr.push({
+      song_name: '',
+      weight: -1,
+    });
+  }
+
+  let t = 0;
+  while (fullWeightedArr.length < 5) {
+    let currentSongName = user2Arr[t].song_name;
+    if (fullWeightedArr.some((e) => e.song_name !== currentSongName)) {
+      fullWeightedArr.push({
+        song_name: currentSongName,
+        weight: 0,
+      });
+    }
+    if (fullWeightedArr[0].weight === -1) {
+      fullWeightedArr.shift();
+    }
+    t++;
+  }
+
   let top5Arr = [];
   for (let i = 0; i < 5; i++) {
     let songName = fullWeightedArr[i].song_name;
-    for (let k = 0; k < user1Arr.length; ++k) {
-      if (user1Arr[k].song_name === songName) {
+    for (let k = 0; k < user2Arr.length; ++k) {
+      if (user2Arr[k].song_name === songName) {
         top5Arr.push({
-          song_name: user1Arr[k].song_name,
-          song_img: user1Arr[k].song_img,
+          song_name: user2Arr[k].song_name.concat(
+            `${fullWeightedArr[i].weight === 0 ? '*' : ''}`
+          ),
+          song_img: user2Arr[k].song_img,
         });
       }
     }

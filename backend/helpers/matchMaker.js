@@ -1,13 +1,18 @@
 //A helper function that figure out two user's match data
-const getTopArtists = require("./artistAlgo");
-const getTopSongs = require("./songAlgo");
-const getCompatibility = require("./compatibility");
-const getTopGenres = require("./genreAlgo");
+const getTopArtists = require('./artistAlgo');
+const getTopSongs = require('./songAlgo');
+const getCompatibility = require('./compatibility');
+const getTopGenres = require('./genreAlgo');
+
 function matchMaker(user1, user2) {
   const topArtists = getTopArtists(user1, user2);
+  // console.log('here1', topArtists);
   const topSongs = getTopSongs(user1, user2);
+  // console.log('here2', topSongs);
   const topGenres = getTopGenres(user1, user2);
+  // console.log(topGenres);
   const compatibility = getCompatibility(user1, user2);
+  // console.log(compatibility);
 
   const comparisonObject = {
     screen1: {

@@ -17,10 +17,7 @@ router.post('/compare', async (req, res) => {
       'user_info.username': originalUsername,
     });
 
-    console.log(requestedUser);
-
     if (requestedUser) {
-      console.log('hit');
       //At this point we have both users. We compare them
       const matchedObject = matchMaker(originalUser, requestedUser);
       res.send(matchedObject);
