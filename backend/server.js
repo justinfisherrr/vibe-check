@@ -1,12 +1,12 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const databaseConnect = require("./database");
+const databaseConnect = require('./database');
 
-require("dotenv").config();
+require('dotenv').config();
 
-const authRouter = require("./routes/auth");
+const authRouter = require('./routes/auth');
 databaseConnect();
-const authCompare = require("./routes/compare");
+const authCompare = require('./routes/compare');
 
 app.use(authRouter);
 app.use(authCompare);

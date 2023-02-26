@@ -1,4 +1,4 @@
-const SpotifyObject = require("./SpotifyObject");
+const SpotifyObject = require('./SpotifyObject');
 async function spotifyParse() {
   const spotifyApi = SpotifyObject.getSpotifyObject();
   let parsedUser = {
