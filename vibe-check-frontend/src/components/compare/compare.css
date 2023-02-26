@@ -1,0 +1,61 @@
+.compare-page{
+    background-color: #e23838;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.compare-content{
+    text-align: center;
+}
+
+.compare-heading{
+    font-size: 60px;
+    color: white;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.at{
+    margin-bottom: 2px;
+}
+
+.input-wrapper{
+    
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #c62a2a;
+    padding: 5px;
+    padding-inline: 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+.username-input{
+    width: 250px;
+    height: 40px;
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.compare-button{
+    margin-top: 30px;
+}

@@ -2,6 +2,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+  overflow: hidden;
+}
+
 /* Box sizing rules */
 *,
 *::before,
