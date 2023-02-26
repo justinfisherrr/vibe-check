@@ -3,7 +3,7 @@ import './screens.css' ;
 
 function Screen1({animationData}){
     return <div className='screen1-content'>
-        <p className='screen1-text'>Did you know that</p>
+        <p className='screen1-text titles'>Did you know that</p>
         <div className='img-container'>
             <div className="left-img">
                 <img src={animationData.screen1.use_one_image} alt="" />
@@ -13,7 +13,7 @@ function Screen1({animationData}){
             </div>
             
         </div>
-        <p className='screen1-text'>{`${animationData.screen1.other_user_name} and your . . . `}</p>
+        <p className='screen1-text titles'>{`${animationData.screen1.other_user_name} and your . . . `}</p>
     </div>
 }
 

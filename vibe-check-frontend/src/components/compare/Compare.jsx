@@ -15,6 +15,7 @@ function Compare() {
 	// Get url params
 	const queryParameters = new URLSearchParams(window.location.search);
 	const token = queryParameters.get('token');
+	const username = queryParameters.get('username');
 
 	// State
 	const [input, setInput] = useState('');
@@ -29,7 +30,8 @@ function Compare() {
 		const sendRequest = async (dataToSend) => {
 			try {
 				const body = {
-					username: dataToSend,
+					my_username: username,
+					other_username: dataToSend,
 				};
 				const header = {
 					headers: {
@@ -78,6 +80,7 @@ function Compare() {
 			</div>
 			<div className="compare-content">
 			<h1 className='compare-heading'>COMPARE WITH</h1>
+			<p className='compare-subheading'>Enter the username of the other user</p>
 			<div className='form'>
 				<div className="input-wrapper">
 					<p className='at'>@</p>
