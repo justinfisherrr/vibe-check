@@ -8,9 +8,9 @@ async function addUser() {
     //Parse the data first
     const parsedData = await spotifyParse();
     const foundProfile = await User.findOne({
-      username: parsedData.user_info.username,
+      "user_info.username": parsedData.user_info.username,
     });
-
+    console.log(foundProfile);
     if (foundProfile) {
       await User.findOneAndUpdate(parsedData);
     } else {
