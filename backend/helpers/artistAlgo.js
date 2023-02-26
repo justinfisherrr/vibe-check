@@ -19,6 +19,9 @@ function getTopArtists(user1, user2) {
         weight: 0,
       });
     }
+    if (fullWeightedArr[0].weight === -1) {
+      fullWeightedArr.shift();
+    }
     t++;
   }
 

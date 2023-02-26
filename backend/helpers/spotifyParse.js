@@ -1,4 +1,4 @@
-const SpotifyObject = require("./SpotifyObject");
+const SpotifyObject = require('./SpotifyObject');
 async function spotifyParse() {
   const spotifyApi = SpotifyObject.getSpotifyObject();
   let parsedUser = {
@@ -10,14 +10,24 @@ async function spotifyParse() {
     const userInfo = await spotifyApi.getMe();
     parsedUser.user_info.user_id = userInfo.body.id;
     parsedUser.user_info.username = userInfo.body.display_name;
-    parsedUser.user_info.profile_img = userInfo.body.images[0].url;
+    if (!userInfo.body.images[0]) {
+      parsedUser.user_info.profile_img = '';
+    } else {
+      parsedUser.user_info.profile_img = userInfo.body.images[0].url;
+    }
 
     const topSongs = await spotifyApi.getMyTopTracks({ limit: 50 });
     const filteredSongs = topSongs.body.items.map((song) => {
       let filteredSong = {};
       filteredSong.song_name = song.name;
       filteredSong.artist_name = song.artists[0].name;
-      filteredSong.song_img = song.album.images[0].url;
+
+      if (!song.album.images[0]) {
+        filteredSong.song_img = '';
+      } else {
+        filteredSong.song_img = song.album.images[0].url;
+      }
+
       return filteredSong;
     });
 
@@ -25,7 +35,13 @@ async function spotifyParse() {
     const filteredArtists = topArtists.body.items.map((artist) => {
       const filteredArtist = {};
       filteredArtist.artist_name = artist.name;
-      filteredArtist.artist_img = artist.images[0].url;
+
+      if (!artist.images[0]) {
+        filteredArtist.artist_img = '';
+      } else {
+        filteredArtist.artist_img = artist.images[0].url;
+      }
+
       filteredArtist.genres = artist.genres;
       return filteredArtist;
     });
@@ -35,7 +51,13 @@ async function spotifyParse() {
       let filteredSong = {};
       filteredSong.song_name = track.name;
       filteredSong.artist_name = track.artists[0].name;
-      filteredSong.song_img = track.album.images[0].url;
+
+      if (!track.album.images[0]) {
+        filteredSong.song_img = '';
+      } else {
+        filteredSong.song_img = track.album.images[0].url;
+      }
+
       return filteredSong;
     });
     parsedUser.user_data.top_artists = filteredArtists;
