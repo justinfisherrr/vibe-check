@@ -16,6 +16,7 @@ function Compare() {
 	const queryParameters = new URLSearchParams(window.location.search);
 	const token = queryParameters.get('token');
 	const username = queryParameters.get('username');
+	
 
 	// State
 	const [input, setInput] = useState('');
@@ -38,6 +39,7 @@ function Compare() {
 						'Content-Type': 'application/json',
 					},
 				};
+
 				const res = await axios.post('http://localhost:5000/compare', body, header);
 				console.log(res.data);
 				setAnimationData(res.data);

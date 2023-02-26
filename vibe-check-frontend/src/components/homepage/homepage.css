@@ -63,6 +63,7 @@ img{
     opacity: 0.1;
     pointer-events: none;
     z-index: 0;
+    height: 100%;
 }
 
 .stiple1{

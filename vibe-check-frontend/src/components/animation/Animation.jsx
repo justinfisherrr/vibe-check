@@ -59,10 +59,13 @@ import waves from '../../images/waves.svg'
         <div className="screens">
             {screens[currentScreen]}
         </div>
-        <div className='buttons'>
-            <button  className="button right-button" onClick={() => prevScreen()}>prev</button>
-            <button className="button left-button" onClick={() => nextScreen()}>next</button>
-        </div>
+     
+            <div className='buttons'>
+                <button  className="button right-button" onClick={() => prevScreen()}>PREV</button>
+                <button className="button left-button" onClick={() => nextScreen()}>{currentScreen !== 4 ? 'NEXT' : 'SHARE RESULTS'}</button>
+            </div> 
+        <p className='recommend'>{`* - ${animationData.screen1.other_username} recommends`}</p>
+
     </div>
 } 
 

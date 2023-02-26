@@ -2,7 +2,7 @@ import React from 'react';
 
 function Screen2({animationData}){
     return <div className="screen screen2-content">
-        <h1 className='titles screen2-title'>MATCHING GENRES ARE</h1>
+        <h1 className='titles screen2-title'>ENJOY LISTENING TO</h1>
          <ul className='genre-list'>
             {animationData.screen2.genres.map((genre) => 
                 <li className='genre sub-texts'>• {genre}</li>)

@@ -10,7 +10,7 @@ function Screen3({animationData}){
                             </div>
                     })}
                 </div>
-                <h1 className='titles screen3-title'>MATCHING ARTISTS ARE</h1>
+                <h1 className='titles screen3-title'>LIKE SONGS BY</h1>
                 <div className='artist-names'>
                     {animationData.screen3.artist.map((artistObj) => {
                         return <p className="artist-name sub-texts">• {artistObj.artist_name}</p>

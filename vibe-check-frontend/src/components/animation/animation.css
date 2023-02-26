@@ -8,9 +8,21 @@
     flex-direction: column;
 }
 
+.recommend{
+    position: absolute;
+    bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
 .buttons{
     position: absolute;
     bottom: 50px;
+}
+
+.share-button{
+    color: black;
 }
 
 .right-button{
