@@ -12,7 +12,6 @@ async function addUser() {
     });
 
     if (foundProfile) {
-      console.log("user already exists");
       await User.findOneAndUpdate(parsedData);
     } else {
       const user = new User(parsedData);
