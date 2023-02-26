@@ -6,5 +6,9 @@ router.post('/compare', (req, res) => {
   res.send('ayo');
 });
 
+router.get('/test', (req, res) => {
+  console.log('hit');
+});
+
 module.exports = router;
 //async function getUser(req, res) {}
