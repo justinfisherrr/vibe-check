@@ -8,10 +8,10 @@ import Screen3 from './Screen3';
 import Screen4 from './Screen4';
 import Screen5 from './Screen5';
 
-import img1 from '../../images/Stiple1.png'
-import img2 from '../../images/Stiple2.png'
-import img3 from '../../images/Stiple3.png'
-import img4 from '../../images/Stiple4.png'
+import img1 from '../../images/Stiple1-purple.png'
+import img2 from '../../images/Stiple2-purple.png'
+import img3 from '../../images/Stiple3-purple.png'
+import img4 from '../../images/Stiple4-purple.png'
 import star from '../../images/star.png'
 import waves from '../../images/waves.svg'
 
@@ -69,7 +69,7 @@ import waves from '../../images/waves.svg'
         </div>
         <div className='buttons'>
             <button onClick={() => prevScreen()}>prev</button>
-            <button onClick={() => nextScreen()}>next</button>
+            <button className="button" onClick={() => nextScreen()}>next</button>
         </div>
     </div>
 } 

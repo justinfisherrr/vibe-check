@@ -1,9 +1,42 @@
+
+/* screen 1 */
 .screen1-content{
 }
 
 .screen1-text{
     font-weight: 700;
-    font-size: 80px;
+    font-size: 60px;
     color: white;
     text-align: center;
+}
+
+.img-container{
+    margin-block: 20px;
+    display: flex;
+}
+
+.left-img, .right-img{
+    width: 250px;
+    height:250px;
+    border-radius: 500px;
+    overflow: hidden;
+}
+
+.left-img{
+    transform: translateX(25px);
+    z-index: 1;
+}
+
+.right-img{
+    transform: translateX(-25px);
+}
+
+/* screen 2 */
+.genre-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
 }

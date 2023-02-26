@@ -28,18 +28,17 @@ function Compare() {
 	useEffect(() => {
 		const sendRequest = async (dataToSend) => {
 			try {
-				// const body = {
-				// 	username: dataToSend,
-				// };
-				// const header = {
-				// 	headers: {
-				// 		'Content-Type': 'application/json',
-				// 	},
-				// };
-				// const res = await axios.post('/compare', body, header);
+				const body = {
+					username: dataToSend,
+				};
+				const header = {
+					headers: {
+						'Content-Type': 'application/json',
+					},
+				};
+				const res = await axios.post('/compare', body, header);
                 // const userData = res.data;
-				// console.log(res.data);
-				console.log(userData);
+				console.log(res);
 				setAnimationData(userData);
 				setResponseData(userData);
 			} catch (err) {
