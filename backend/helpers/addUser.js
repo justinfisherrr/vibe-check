@@ -17,6 +17,7 @@ async function addUser() {
       const user = new User(parsedData);
       await user.save();
     }
+    return parsedData.user_data.username;
   } catch (error) {
     console.log(error, "Found in addUser");
   }
