@@ -1,0 +1,35 @@
+/* screen 1 */
+.screen1-content{
+
+}
+
+.screen1-text{
+    text-align: center;
+}
+
+.img-container{
+    margin-block: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper{
+    width: 250px;
+    height:250px;
+    border-radius: 500px;
+    overflow: hidden;
+}
+
+.left-img{
+    transform: translateX(25px);
+    z-index: 1;
+}
+
+.right-img{
+    transform: translateX(-25px);
+}
+
+.profile-img{
+    width: 100%;
+}

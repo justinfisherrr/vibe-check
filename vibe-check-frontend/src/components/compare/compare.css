@@ -1,66 +1,79 @@
 .compare-page{
     background-color: #e23838;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
 .compare-content{
     text-align: center;
+    width: fit-content;
+    padding-inline: 20px;
 }
 
 .compare-heading{
-    font-size: 60px;
+    font-size: 45px;
+    line-height: 50px;
     color: white;
-    height: 80px;
+    height: 100px;
 }
 
-.compare-subheading{
+.compare-your-id{
     font-size: 20px;
     color: white;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.at{
-    margin-bottom: 2px;
-}
-
-.input-wrapper{
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    background-color: #c62a2a;
-    padding: 5px;
-    padding-inline: 15px;
-    border-radius: 5px;
+.compare-subheading{
+    font-size: 16px;
     color: white;
+    padding-inline: 20px;
 }
 
-.username-input{
-    width: 250px;
-    height: 40px;
-    border: none;
-    font-size: 18px;
-    background-color: transparent;
-    color: white;
+@media screen and (min-width: 350px) {
+    .compare-heading{
+        font-size: 55px;
+        line-height: 60px;
+        height: 125px;
+    }
+
+    .compare-your-id{
+        font-size: 25px;
+    }
+    
+    .compare-subheading{
+        font-size: 20px;
+    }
+    
 }
 
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
+@media screen and (min-width: 480px) {
+    .compare-heading{
+        font-size: 70px;
+        line-height: 70px;
+        height: fit-content;
+    }
+
+    .compare-your-id{
+        font-size: 25px;
+    }
+    
+    .compare-subheading{
+        font-size: 20px;
+    }
+    
 }
 
-.compare-button{
-    margin-top: 30px;
+@media screen and (min-width: 650px) {
+    .compare-heading{
+        font-size: 70px;
+    }
+    
+    .compare-subheading{
+        font-size: 22px;
+    }
+    
+    .compare-your-id{
+        font-size: 35px;
+    }
 }
+
+
+

@@ -1,10 +1,5 @@
 .homepage{
     background-color: #e23838;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
 }
 
 .homepage-content{
@@ -16,15 +11,17 @@
 }
 
 .homepage-heading{
-    font-size: 100px;
+    font-size: 40px;
     color: white;
-    height: 125px;
+    height: 60px;
+    /* background-color: aqua; */
 }
 
-
 .homepage-subtext{
-    font-size: 20px;
+    font-size: 16px;
     color: white;
+    text-align: center;
+    padding-inline: 25px;
 }
 
 .button{
@@ -46,63 +43,34 @@
     transform: scale(1.05);
 }
 
-.stiple{
-    position: absolute;
-    pointer-events: none;
+@media screen and (min-width: 400px) {
+    .homepage-heading{
+        font-size: 55px;
+        height: 75px;
+    }
     
 }
 
-img{
-    width: 100%;
+@media screen and (min-width: 480px) {
+    .homepage-heading{
+        font-size: 75px;
+        height: 100px;
+    }
+
+    .homepage-subtext{
+        font-size: 18px;
+    }
+    
 }
 
-.waves{
-    left: 0;
-    top: 0;
-    position: absolute;
-    opacity: 0.1;
-    pointer-events: none;
-    z-index: 0;
-    height: 100%;
+@media screen and (min-width: 1300px) {
+    .homepage-heading{
+        font-size: 100px;
+        height: 125px;
+    }
+    
+    .homepage-subtext{
+        font-size: 20px;
+    }
 }
 
-.stiple1{
-    left: 0px;
-    bottom: -300px;
-    width: 850px;
-    transform: rotate(-15deg);
-}
-
-.stiple2{
-    left: -100px;
-    top: -100px;
-    width: 600px;
-    transform: rotate(25deg);
-}
-
-.stiple3{
-    right: -0px;
-    top: -100px;
-    width: 600px;
-    transform: rotate(-40deg);
-}
-
-.stiple4{
-    right: 100px;
-    bottom: -200px;
-    width: 600px;
-}
-
-.star{
-    width: 125px;
-}
-
-.star1{
-    right: 380px;
-    top: 80px;
-}
-
-.star2{
-    left: 200px;
-    bottom: 150px;
-}

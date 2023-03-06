@@ -1,0 +1,35 @@
+.compare-img-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-block: 25px;
+}
+
+.compare-img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.compare-img-left{
+    transform: translateX(20px);
+    z-index: 1;
+}
+
+.compare-img-right{
+    
+    transform: translateX(-20px);
+}
+
+@media screen and (min-width: 350px) {
+    .compare-img{
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .compare-img{
+        width: 200px;
+        height: 200px;
+    }
+}

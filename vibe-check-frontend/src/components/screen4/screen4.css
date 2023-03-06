@@ -1,0 +1,11 @@
+/* screen 4 */
+.screen4-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.screen4-title{
+    color: rgb(241, 238, 85);
+}
