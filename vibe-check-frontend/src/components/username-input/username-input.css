@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .at-symbol{
@@ -21,6 +22,12 @@
     color: white;
     width: 100%;
     max-width: 300px;
+    
+}
+
+.bottom-line{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .username-input{
@@ -59,4 +66,10 @@ button:focus {
 
 .compare-arrow{
     width: 25px;
+}
+
+.search-results-aligner{
+    width: 100%;
+    max-width: 300px;
+    position: relative;
 }
