@@ -6,9 +6,7 @@ const User = require("../models/user");
 router.get("/getuser/:id", async (req, res) => {
   let users = {};
   const parse = {
-    "user_info.user_id": 1,
-    "user_info.username": 1,
-    "user_info.profile_img": 1,
+    user_info: 1,
     _id: 0,
   };
   const conditionals = {
