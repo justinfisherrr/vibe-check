@@ -1,24 +1,22 @@
 //A helper function that adds a user to our database
-const mongoose = require('mongoose');
-const User = require('../models/user');
-const spotifyParse = require('./spotifyParse');
+const mongoose = require("mongoose");
+const User = require("../models/user");
+const spotifyParse = require("./spotifyParse");
 
 async function addUser() {
   try {
     //Parse the data first
     const parsedData = await spotifyParse();
     const foundProfile = await User.findOne({
-      'user_info.username': parsedData.user_info.username,
+      "user_info.user_id": parsedData.user_info.user_id,
     });
 
     if (foundProfile) {
-      // await User.findOneAndUpdate(parsedData);
       await User.findOneAndUpdate(
         {
-          'user_info.username': parsedData.user_info.username,
+          "user_info.user_id": parsedData.user_info.user_id,
         },
-        { $set: parsedData },
-        { new: true }
+        { $set: parsedData }
       );
     } else {
       const user = new User(parsedData);
@@ -26,7 +24,7 @@ async function addUser() {
     }
     return parsedData.user_info.username;
   } catch (error) {
-    console.log(error, 'Found in addUser');
+    console.log(error, "Found in addUser");
   }
 }
 
