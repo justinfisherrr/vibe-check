@@ -1,1 +1,3 @@
-POST http://localhost:5000/compare
+//POST http://localhost:5000/compare
+
+GET http://localhost:5000/getuser/justinfisherr
