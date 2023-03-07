@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 .at-symbol{
@@ -21,7 +20,7 @@
     border-radius: 5px;
     color: white;
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     
 }
 
@@ -70,6 +69,6 @@ button:focus {
 
 .search-results-aligner{
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     position: relative;
 }
