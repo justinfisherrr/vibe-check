@@ -24,9 +24,10 @@ router.get("/getuser/:id", async (req, res) => {
   };
   try {
     users = await User.find(conditionals, parse);
-    res.send(users);
+    res.status(200).send({ data: users, success: true });
   } catch (error) {
-    res.status(500).send(users);
+    //We can only reach here on a server error
+    res.status(500).send({ success: false });
   }
 });
 

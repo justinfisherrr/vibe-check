@@ -90,7 +90,7 @@ router.get("/callback", async (req, res) => {
     }, (expires_in / 2) * 1000);
   } catch (err) {
     console.error("Error getting Tokens:", error);
-    res.send(`Error getting Tokens: ${error}`);
+    res.send({ message: `Error getting Tokens: ${error}`, success: false });
   }
 });
 module.exports = router;
