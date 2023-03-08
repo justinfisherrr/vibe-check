@@ -16,10 +16,14 @@ export default function UsernameInput({ setResponseData }) {
   const [dataToSend, setDataToSend] = useState('');
   const [allowedToSend, setAllowedToSend] = useState(false);
 
+  const [inputToSend, setInputToSend] = useState('');
+  const [inputResponse, setInputResponse] = useState([]);
+
   // Context
   const [animationData, setAnimationData] = useContext(animationContext);
 
   useEffect(() => {
+    // on send
     const sendRequest = async (dataToSend) => {
       try {
         const body = {
@@ -47,12 +51,53 @@ export default function UsernameInput({ setResponseData }) {
       sendRequest(dataToSend);
     }
     setAllowedToSend(false);
-  }, [dataToSend, allowedToSend, setAnimationData, username, setResponseData]);
+
+    // on input change
+    const sendInputRequest = async (inputToSend) => {
+      try {
+        console.log('sending');
+        const header = {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        };
+
+        const res = await axios.get(
+          `http://localhost:5000/getuser/${inputToSend}`,
+          header
+        );
+        setInputResponse(res.data);
+        console.log(res.data);
+        // setAnimationData(res.data);
+        // setResponseData(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    if (inputToSend) {
+      sendInputRequest(inputToSend);
+    } else {
+      setInputResponse([]);
+    }
+  }, [
+    dataToSend,
+    allowedToSend,
+    setAnimationData,
+    username,
+    setResponseData,
+    inputToSend,
+  ]);
 
   function handleSend(input) {
     setAllowedToSend(true);
     setDataToSend(input);
     setInput('');
+  }
+
+  function handleInputChange(value) {
+    setInputToSend(value);
+    setInput(value);
   }
 
   return (
@@ -62,14 +107,14 @@ export default function UsernameInput({ setResponseData }) {
         <input
           className='username-input'
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={(e) => handleInputChange(e.target.value)}
         />
         <button className='compare-button' onClick={() => handleSend(input)}>
           <img src={arrow} className='compare-arrow' alt='' />
         </button>
       </div>
       <div className='search-results-aligner'>
-        <SearchResults results={results.results} />
+        <SearchResults results={inputResponse} />
       </div>
     </div>
   );

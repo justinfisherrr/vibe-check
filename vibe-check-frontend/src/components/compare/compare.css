@@ -27,6 +27,8 @@
     padding-inline: 20px;
 }
 
+
+
 @media screen and (min-width: 350px) {
     .compare-heading{
         font-size: 55px;
@@ -74,6 +76,5 @@
         font-size: 35px;
     }
 }
-
 
 
