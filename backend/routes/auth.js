@@ -46,7 +46,6 @@ router.get("/login", (req, res) => {
 router.get("/callback", async (req, res) => {
   const error = req.query.error;
   const code = req.query.code;
-  const state = req.query.state;
 
   if (error) {
     console.error("Callback Error:", error);
