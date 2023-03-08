@@ -27,7 +27,7 @@ router.get("/getuser/:id", async (req, res) => {
     res.status(200).send({ data: users, success: true });
   } catch (error) {
     //We can only reach here on a server error
-    res.status(500).send({ success: false });
+    res.status(500).send({ message: error, success: false });
   }
 });
 
