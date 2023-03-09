@@ -9,8 +9,8 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    width: 140px;
-    height: 140px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     position: relative;
 }
@@ -33,10 +33,17 @@
     transform: translateX(-20px);
 }
 
+@media screen and (min-width: 300px) {
+    .compare-img-wrapper{
+        width: 120px;
+        height: 120px;
+    }
+}
+
 @media screen and (min-width: 350px) {
     .compare-img-wrapper{
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
     }
 }
 
