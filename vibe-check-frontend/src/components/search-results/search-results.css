@@ -4,7 +4,7 @@
     width: 100%;
     background-color: #c62a2a;
     height: fit-content;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -17,6 +17,22 @@
     cursor: pointer;
     position: relative;
     border-top: 1px solid #e94343;
+}
+
+.no-result{
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  border-top: 1px solid #e94343;
+  color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding-left: 10px;
 }
 
 .result:hover{
@@ -51,11 +67,13 @@
 }
 
 .result-displayname{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
 }
 
 .result-id{
+  font-size: 14px;
+  font-weight: 300;
 }
 
 /* ===== Scrollbar CSS ===== */

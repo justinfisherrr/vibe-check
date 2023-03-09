@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import defaultImg from '../../images/default-user-image.svg';
-import useWindowSize from '../window-size/useWindowSize';
+import useWindowSize from '../../hooks/window-size/useWindowSize';
 import './search-results.css';
 
-export default function SearchResults({ results }) {
+export default function SearchResults({ results, userId, input }) {
 	const windowSize = useWindowSize();
 	const [bottomOfScreen, setBottomOfScreen] = useState(0);
 
@@ -25,6 +25,9 @@ export default function SearchResults({ results }) {
 			style={{ maxHeight: bottomOfScreen || 0 }}>
 			{results.success &&
 				results.data.map(({ user_info }) => {
+					if (user_info.user_id === userId) {
+						return null;
+					}
 					return (
 						<div className='result' key={user_info.user_id}>
 							<div className='result-img-wrapper'>
@@ -43,6 +46,16 @@ export default function SearchResults({ results }) {
 						</div>
 					);
 				})}
+			{!results.loading &&
+				results.success &&
+				results.data.length === 0 &&
+				input && <p className='no-result'>NO RESULT</p>}
+			{!results.loading &&
+				results.success &&
+				results.data.length === 1 &&
+				results.data[0].user_info.user_id === userId && (
+					<p className='no-result'>NO RESULT</p>
+				)}
 		</div>
 	);
 }

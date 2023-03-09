@@ -26,7 +26,7 @@ function Compare() {
 					<p className='compare-subheading'>
 						Enter the other users Vibe Check ID
 					</p>
-					<UsernameInput setResponseData={setResponseData} />
+					<UsernameInput setResponseData={setResponseData} userId={userId} />
 				</div>
 			</Background>
 		</div>

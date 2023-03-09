@@ -3,6 +3,7 @@ import './screen1.css';
 import defaultImg from '../../images/default-user-image.svg';
 
 function Screen1({ animationData }) {
+	console.log(animationData);
 	return (
 		<div className='screen screen1-content'>
 			<p className='screen1-text titles'>Did you know that</p>

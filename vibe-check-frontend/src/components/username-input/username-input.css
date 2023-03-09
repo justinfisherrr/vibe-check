@@ -20,7 +20,7 @@
     border-radius: 5px;
     color: white;
     width: 100%;
-    max-width: 350px;
+    max-width: 325px;
     
 }
 
@@ -69,6 +69,6 @@ button:focus {
 
 .search-results-aligner{
     width: 100%;
-    max-width: 350px;
+    max-width: 325px;
     position: relative;
 }
