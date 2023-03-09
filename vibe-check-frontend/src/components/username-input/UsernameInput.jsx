@@ -60,7 +60,12 @@ export default function UsernameInput({ setResponseData, userId }) {
 				</button>
 			</div>
 			<div className='search-results-aligner'>
-				<SearchResults results={searchResults} userId={userId} input={input} />
+				<SearchResults
+					results={searchResults}
+					userId={userId}
+					input={input}
+					handleSend={handleSend}
+				/>
 			</div>
 		</div>
 	);

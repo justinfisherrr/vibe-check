@@ -3,7 +3,7 @@ import defaultImg from '../../images/default-user-image.svg';
 import useWindowSize from '../../hooks/window-size/useWindowSize';
 import './search-results.css';
 
-export default function SearchResults({ results, userId, input }) {
+export default function SearchResults({ results, userId, input, handleSend }) {
 	const windowSize = useWindowSize();
 	const [bottomOfScreen, setBottomOfScreen] = useState(0);
 
@@ -29,7 +29,10 @@ export default function SearchResults({ results, userId, input }) {
 						return null;
 					}
 					return (
-						<div className='result' key={user_info.user_id}>
+						<div
+							className='result'
+							onClick={() => handleSend(user_info.user_id)}
+							key={user_info.user_id}>
 							<div className='result-img-wrapper'>
 								<img
 									src={
