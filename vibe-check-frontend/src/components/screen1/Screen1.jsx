@@ -1,6 +1,6 @@
 import React from 'react';
 import './screen1.css';
-import defaultImg from '../../images/default.jpg';
+import defaultImg from '../../images/default-user-image.svg';
 
 function Screen1({ animationData }) {
 	return (

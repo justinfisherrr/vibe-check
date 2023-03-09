@@ -1,5 +1,6 @@
 .homepage{
     background-color: #e23838;
+    min-height: var(--min-height);
 }
 
 .homepage-content{
@@ -14,7 +15,6 @@
     font-size: 40px;
     color: white;
     height: 60px;
-    /* background-color: aqua; */
 }
 
 .homepage-subtext{

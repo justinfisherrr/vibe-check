@@ -11,7 +11,11 @@ export default function SearchResults({ results }) {
 		const resultsWrapper = document.querySelector('.search-results-wrapper');
 		const resultsWrapperTop = resultsWrapper.getBoundingClientRect().top;
 
-		const bottomOfScreen = windowSize.height - resultsWrapperTop - 20;
+		const backgroundWrapper = document.querySelector('.background-wrapper');
+		const backgroundWrapperBottom =
+			backgroundWrapper.getBoundingClientRect().bottom;
+
+		const bottomOfScreen = backgroundWrapperBottom - resultsWrapperTop - 20;
 		setBottomOfScreen(bottomOfScreen);
 	}, [windowSize]);
 

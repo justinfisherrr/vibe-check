@@ -1,14 +1,10 @@
-.App{
-    font-family: 'Poppins', sans-serif;
+:root{
+  --min-height: 800px;
 }
 
-.page{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
+.App{
+    font-family: 'Poppins', sans-serif;
+    min-height: var(--min-height);
 }
 
 .content{
@@ -16,7 +12,7 @@
 }
 
 body{
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Box sizing rules */

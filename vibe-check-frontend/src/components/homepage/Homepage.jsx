@@ -12,7 +12,7 @@ function Home() {
 	}
 
 	return (
-		<div className='page homepage'>
+		<div className='homepage'>
 			<Background>
 				<div className='content homepage-content'>
 					<h1 className='homepage-heading'>VIBECHECK</h1>

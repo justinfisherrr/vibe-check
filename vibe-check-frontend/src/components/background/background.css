@@ -1,7 +1,28 @@
+.background-container{
+    height: 100vh;
+    min-height: var(--min-height);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.background-wrapper{
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
 .absolute{
     position: absolute;
     pointer-events: none;
 }
+
+
 
 .stiple-img{
     width: 100%;
@@ -10,6 +31,7 @@
 .wave-top-container{
     width: 2200px;
     height: 100%;
+    height: 300px;
 }
 
 .waves-top{
