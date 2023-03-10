@@ -7,6 +7,19 @@
     min-height: var(--min-height);
 }
 
+
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(220, 220, 220);
+}
+
 .content{
   z-index: 1;
 }

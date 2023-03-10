@@ -1,15 +1,15 @@
 import React from 'react';
 import './background.css';
 
-import img1 from '../../images/Stiple1.png';
-import img2 from '../../images/Stiple2.png';
-import img3 from '../../images/Stiple3.png';
-import img4 from '../../images/Stiple4.png';
+import Image1 from '../image1/Image1';
+import Image2 from '../image2/Image2';
+import Image3 from '../image3/Image3';
+import Image4 from '../image4/Image4';
 import star from '../../images/star.png';
 import wavesTop from '../../images/waves-top.svg';
 import wavesBottom from '../../images/waves-bottom.svg';
 
-export default function Background({ children }) {
+export default function Background({ children, currentScreen }) {
 	return (
 		<div className='background-container'>
 			<div className='background-wrapper'>
@@ -20,16 +20,16 @@ export default function Background({ children }) {
 					<img className='waves-bottom' src={wavesBottom} alt='' />
 				</div>
 				<div className='absolute stiple-img-container-1'>
-					<img className='stiple-img' src={img1} alt='' />
+					<Image1 currentScreen={currentScreen} />
 				</div>
 				<div className='absolute stiple-img-container-2'>
-					<img className='stiple-img' src={img2} alt='' />
+					<Image2 currentScreen={currentScreen} />
 				</div>
 				<div className='absolute stiple-img-container-3'>
-					<img className='stiple-img' src={img3} alt='' />
+					<Image3 currentScreen={currentScreen} />
 				</div>
 				<div className='absolute stiple-img-container-4'>
-					<img className='stiple-img' src={img4} alt='' />
+					<Image4 currentScreen={currentScreen} />
 				</div>
 				<div className='absolute star star1'>
 					<img className='stiple-img' src={star} alt='' />

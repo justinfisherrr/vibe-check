@@ -4,6 +4,9 @@ import './animation.css';
 
 import Background from '../background/Background';
 
+import rightCarret from '../../images/caret-right-solid.svg';
+import leftCarret from '../../images/caret-left-solid.svg';
+
 import Screen1 from '../screen1/Screen1';
 import Screen2 from '../screen2/Screen2';
 import Screen3 from '../screen3/Screen3';
@@ -41,16 +44,18 @@ function Animation() {
 	}
 
 	return (
-		<div className={`page animation-page animation-page-${currentScreen}`}>
-			<Background>
-				<div className='screens'>{screens[currentScreen]}</div>
-				<div className='buttons'>
-					<button className='button right-button' onClick={() => prevScreen()}>
-						PREV
-					</button>
-					<button className='button left-button' onClick={() => nextScreen()}>
-						{currentScreen !== 4 ? 'NEXT' : 'SHARE RESULTS'}
-					</button>
+		<div className={`animation-page animation-page-${currentScreen}`}>
+			<Background currentScreen={currentScreen}>
+				<div className='animation-content-wrapper'>
+					<div className='screens'>{screens[currentScreen]}</div>
+					<div className='buttons'>
+						<button className='animation-button' onClick={() => prevScreen()}>
+							<img className='carret' src={leftCarret} alt='' />
+						</button>
+						<button className='animation-button' onClick={() => nextScreen()}>
+							<img className='carret' src={rightCarret} alt='' />
+						</button>
+					</div>
 				</div>
 			</Background>
 		</div>

@@ -3,7 +3,6 @@ import './screen1.css';
 import defaultImg from '../../images/default-user-image.svg';
 
 function Screen1({ animationData }) {
-	console.log(animationData);
 	return (
 		<div className='screen screen1-content'>
 			<p className='screen1-text titles'>Did you know that</p>
@@ -31,7 +30,7 @@ function Screen1({ animationData }) {
 					/>
 				</div>
 			</div>
-			<p className='screen1-text titles'>{`you and ${animationData.screen1.other_username} both . . . `}</p>
+			<p className='screen1-text titles'>{`you and ${animationData.screen1.other_username}. . . `}</p>
 		</div>
 	);
 }

@@ -78,23 +78,25 @@
 
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
-  * {
+  .search-results-wrapper {
     scrollbar-width: auto;
     scrollbar-color: #ababab #ffffff;
   }
 
   /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
+  .search-results-wrapper::-webkit-scrollbar {
     width: 16px;
   }
 
-  *::-webkit-scrollbar-track {
+  .search-results-wrapper::-webkit-scrollbar-track {
     background: #b92525;
     border-bottom-right-radius: 5px;
   }
 
-  *::-webkit-scrollbar-thumb {
+  .search-results-wrapper::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     border: 3px solid #b92525;
   }
+
+  
