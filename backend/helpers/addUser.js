@@ -1,7 +1,7 @@
 //A helper function that adds a user to our database
 const mongoose = require('mongoose');
 const User = require('../models/user');
-const spotifyParse = require('./spotifyParse');
+const spotifyParse = require('../parsers/spotifyParse');
 
 async function addUser() {
 	try {

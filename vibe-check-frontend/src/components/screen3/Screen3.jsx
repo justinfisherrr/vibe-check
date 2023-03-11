@@ -13,7 +13,7 @@ function Screen3({ animationData }) {
 							}`}>
 							<img
 								className='artist-img'
-								src={artistObj.artist_images}
+								src={artistObj.artist_img}
 								alt=''></img>
 						</div>
 					);

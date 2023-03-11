@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const SpotifyObject = require('../helpers/SpotifyObject');
+const SpotifyObject = require('../objects/SpotifyObject');
 const addUser = require('../helpers/addUser');
 
 const client_id = process.env.CLIENT_ID;
