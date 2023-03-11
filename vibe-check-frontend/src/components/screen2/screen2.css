@@ -1,7 +1,8 @@
 /* screen 2 */
-.animation-page-1{
+.animation-page-genres{
     background-color: #d6f47e;
 }
+
 .screen2-content{
     display: flex;
     justify-content: center;
@@ -18,6 +19,7 @@
     line-height: 35px;
     text-align: center;
     color: #51365b;
+    text-transform: uppercase;
 }
 
 .genre-list{
@@ -38,8 +40,6 @@
     
 }
 
-
-
 .genre-info, .genre-number{
     font-size: 20px;
     font-weight: 700;
@@ -51,15 +51,12 @@
     font-size: 24px;
 }
 
-
 .genre-text-wrapper{
     display: flex;
     flex-direction: column;
     transform: translateY(12px);
 
 }
-
-
 
 .genre-text {
     font-weight: 800;
@@ -83,8 +80,6 @@
     margin-top: 20px;
     white-space: nowrap;
 }
-
-
 
 .genre-text-1{
     background-color: #a70303;

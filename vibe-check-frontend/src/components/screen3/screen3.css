@@ -6,6 +6,10 @@
     flex-direction: column;
 }
 
+.animation-page-artists{
+    background-color: #1e4b9e;
+}
+
 .screen3-title{
     color: aquamarine;
 }

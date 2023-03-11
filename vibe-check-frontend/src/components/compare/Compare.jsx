@@ -8,8 +8,6 @@ import './compare.css';
 function Compare() {
 	// Get url params
 	const urlObj = new URLSearchParams(window.location.search);
-	const token = urlObj.get('token');
-	const username = urlObj.get('username');
 	const userId = urlObj.get('user_id');
 	const profileImg = urlObj.get('profile_img');
 
@@ -31,7 +29,10 @@ function Compare() {
 			</Background>
 		</div>
 	) : (
-		<Navigate to={`/animation?token=${token}`} responseData={responseData} />
+		<Navigate
+			to={`/animation?${urlObj.toString()}`}
+			responseData={responseData}
+		/>
 	);
 }
 

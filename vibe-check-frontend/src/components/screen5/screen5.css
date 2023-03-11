@@ -6,6 +6,10 @@
     flex-direction: column;
 }
 
+.animation-page-precent{
+    background-color: #96efb7;
+}
+
 .screen5-title{
     color: rgb(255, 255, 255);
     font-size: 75px;
@@ -26,4 +30,28 @@
 
 .small-percent{
     font-size: 150px;
+}
+
+.burst{
+    position: absolute;
+    top: -50px;
+    opacity: 0.15;
+    animation: rotate 50s linear infinite ;
+    pointer-events: none;
+  }
+
+  @keyframes rotate {
+    0%   {
+        transform: scale(3) rotate(0deg);
+    }
+    100% {
+        transform: scale(3) rotate(360deg);
+    }
+  }
+
+@media screen and (min-width: 400px){
+    .buttons{
+        margin-top: 20px;
+    }
+    
 }

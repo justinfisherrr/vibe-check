@@ -90,7 +90,7 @@ function getTopArtists(user1, user2, type) {
 	const topItemInstance = new TopItem(user1, user2, type);
 
 	let fullWeightedArr = compareArtists(topItemInstance);
-	fullWeightedArr = verifyAtLeastOneMatch(fullWeightedArr);
+	// fullWeightedArr = verifyAtLeastOneMatch(fullWeightedArr);
 
 	return getTop5(fullWeightedArr);
 }

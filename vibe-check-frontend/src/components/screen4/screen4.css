@@ -6,6 +6,10 @@
     flex-direction: column;
 }
 
+.animation-page-songs{
+    background-color: #e788c2;
+}
+
 .screen4-title{
     color: rgb(241, 238, 85);
 }

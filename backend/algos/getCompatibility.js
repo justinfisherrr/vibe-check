@@ -75,10 +75,6 @@ function compare(user1, user2) {
 	return Math.min(Math.floor(matchValue * 100), 100);
 }
 
-// in < user_data
-// returns > weighted map of user top artists' genres
-//    weighting is done by dividing each genre
-//    by user's total genre instances
 function makeData({ user_data }) {
 	let totalGenres = 0;
 	const topArtists = user_data.top_artists;
@@ -93,8 +89,6 @@ function makeData({ user_data }) {
 	});
 
 	const [addedGenres, newMap] = boostGenres(userMap);
-	console.log(addedGenres);
-	console.log(newMap);
 	// totalGenres += addedGenres;
 
 	userMap.forEach((genre) => {
@@ -114,9 +108,6 @@ function matchGenres(map1, map2) {
 	return result;
 }
 
-// in < array of matching keys, map of each user's
-//    genres
-// out > THE NUMBER
 function compatibility(matchedArray, map1, map2) {
 	let total = 0;
 	matchedArray.forEach((key) => {

@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { animationContext } from '../../context/animationContext';
+import React, { useState } from 'react';
+import useScreens from '../../hooks/useScreens/useScreens';
 import './animation.css';
 
 import Background from '../background/Background';
@@ -7,27 +7,18 @@ import Background from '../background/Background';
 import rightCarret from '../../images/caret-right-solid.svg';
 import leftCarret from '../../images/caret-left-solid.svg';
 
-import Screen1 from '../screen1/Screen1';
-import Screen2 from '../screen2/Screen2';
-import Screen3 from '../screen3/Screen3';
-import Screen4 from '../screen4/Screen4';
-import Screen5 from '../screen5/Screen5';
-
 function Animation() {
-	const [animationData, setAnimationData] = useContext(animationContext);
-	const [currentScreen, setCurrentScreen] = useState(0);
-
-	const screens = [
-		<Screen1 animationData={animationData} />,
-		<Screen2 animationData={animationData} />,
-		<Screen3 animationData={animationData} />,
-		<Screen4 animationData={animationData} />,
-		<Screen5 animationData={animationData} />,
-	];
+	const [index, setIndex] = useState(0);
+	const [screens, styles] = useScreens();
 
 	function prevScreen() {
-		setCurrentScreen((currentScreen) => {
+		setIndex((currentScreen) => {
 			if (currentScreen === 0) {
+				const url =
+					process.env.NODE_ENV === 'production'
+						? ''
+						: 'http://localhost:5000/login';
+				window.location.replace(url);
 				return currentScreen;
 			}
 			return currentScreen - 1;
@@ -35,7 +26,7 @@ function Animation() {
 	}
 
 	function nextScreen() {
-		setCurrentScreen((currentScreen) => {
+		setIndex((currentScreen) => {
 			if (currentScreen === screens.length - 1) {
 				return currentScreen;
 			}
@@ -44,10 +35,10 @@ function Animation() {
 	}
 
 	return (
-		<div className={`animation-page animation-page-${currentScreen}`}>
-			<Background currentScreen={currentScreen}>
+		<div className={`animation-page animation-page-${styles[index]}`}>
+			<Background currentScreen={styles[index]}>
 				<div className='animation-content-wrapper'>
-					<div className='screens'>{screens[currentScreen]}</div>
+					<div className='screens'>{screens[index]}</div>
 					<div className='buttons'>
 						<button className='animation-button' onClick={() => prevScreen()}>
 							<img className='carret' src={leftCarret} alt='' />

@@ -1,0 +1,11 @@
+.stiple-img-intro{
+    filter: invert(17%) sepia(82%) saturate(1058%) hue-rotate(204deg) brightness(92%) contrast(98%);
+}
+
+.stiple-img-genres{
+    filter: invert(22%) sepia(21%) saturate(914%) hue-rotate(235deg) brightness(94%) contrast(92%);
+}
+
+.stiple-img-no-match{
+    filter: invert(39%) sepia(60%) saturate(250%) hue-rotate(172deg) brightness(95%) contrast(91%);
+}

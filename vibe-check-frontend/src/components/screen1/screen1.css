@@ -1,14 +1,23 @@
 /* screen 1 */
 .screen1-content{
+max-width: 550px;
+}
 
+.animation-page-intro{
+    background-color: #97f0b6;
 }
 
 .screen1-text{
     text-align: center;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 55px;
+    text-transform: uppercase;
+    color: #fff7d0;
 }
 
 .img-container{
-    margin-block: 20px;
+    margin-block: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +28,7 @@
     height:250px;
     border-radius: 500px;
     overflow: hidden;
+
 }
 
 .left-img{

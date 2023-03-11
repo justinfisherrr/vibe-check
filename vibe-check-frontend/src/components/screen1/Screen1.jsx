@@ -5,7 +5,7 @@ import defaultImg from '../../images/default-user-image.svg';
 function Screen1({ animationData }) {
 	return (
 		<div className='screen screen1-content'>
-			<p className='screen1-text titles'>Did you know that</p>
+			<p className='screen1-text'>Did you know that</p>
 			<div className='img-container'>
 				<div className='img-wrapper left-img'>
 					<img
@@ -30,7 +30,7 @@ function Screen1({ animationData }) {
 					/>
 				</div>
 			</div>
-			<p className='screen1-text titles'>{`you and ${animationData.screen1.other_username}. . . `}</p>
+			<p className='screen1-text'>{`you and ${animationData.screen1.other_username} . . .`}</p>
 		</div>
 	);
 }

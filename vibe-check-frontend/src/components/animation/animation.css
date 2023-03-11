@@ -62,21 +62,6 @@
     transform: scale(1.05);
 }
 
-.animation-page-0{
-    background-color: #9e1e37;
-}
-
-.animation-page-2{
-    background-color: #1e4b9e;
-}
-
-.animation-page-3{
-    background-color: #e788c2;
-}
-
-.animation-page-4{
-    background-color: #96efb7;
-}
 
 /* Screens */
 .titles{
@@ -103,26 +88,3 @@
         opacity: 1;
     }
   }
-
-  .burst{
-    position: absolute;
-    top: -50px;
-    opacity: 0.15;
-    animation: rotate 50s linear infinite ;
-  }
-
-  @keyframes rotate {
-    0%   {
-        transform: scale(3) rotate(0deg);
-    }
-    100% {
-        transform: scale(3) rotate(360deg);
-    }
-  }
-
-@media screen and (min-width: 400px){
-    .buttons{
-        margin-top: 20px;
-    }
-    
-}

@@ -1,0 +1,35 @@
+.wave-top-container{
+    width: 2200px;
+    height: 100%;
+    height: 300px;
+}
+
+.waves-top{
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    opacity: 0.1;
+    z-index: 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+.waves-top-no-match, .waves-bottom-no-match{
+    filter: invert(97%) sepia(3%) saturate(0%) hue-rotate(253deg) brightness(103%) contrast(103%);
+}
+
+.wave-bottom-container{
+    width: 2800px;
+    height: 100%;
+}
+
+.waves-bottom{
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+    pointer-events: none;
+    opacity: 0.1;
+    z-index: 0;
+    width: 100%;
+    object-fit: cover;
+}
