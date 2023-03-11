@@ -4,7 +4,7 @@ import defaultImg from '../../images/default-user-image.svg';
 
 function Screen1({ animationData }) {
 	return (
-		<div className='screen screen1-content'>
+		<div className='screen1-content fade-in'>
 			<p className='screen1-text'>Did you know that</p>
 			<div className='img-container'>
 				<div className='img-wrapper left-img'>

@@ -1,5 +1,9 @@
+.stiple-img{
+    /* transition: all 0.1s ease-in-out; */
+}
+
 .stiple-img-intro{
-    filter: invert(17%) sepia(82%) saturate(1058%) hue-rotate(204deg) brightness(92%) contrast(98%);
+    filter: invert(15%) sepia(43%) saturate(1420%) hue-rotate(193deg) brightness(95%) contrast(90%);
 }
 
 .stiple-img-genres{

@@ -4,7 +4,7 @@ import './screen2.css';
 function Screen2({ animationData }) {
 	return (
 		<div className='screen2-content'>
-			<h1 className='screen2-title'>Matching Genres Are</h1>
+			<h1 className='screen2-title fade-in'>Matching Genres Are</h1>
 			<ul className='genre-list'>
 				{animationData.screen2.genres.map((genre, index) => (
 					<li className={`genre-wrapper genre-wrapper-${index + 1}`}>
