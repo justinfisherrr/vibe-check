@@ -11,5 +11,19 @@
 }
 
 .stiple-img-no-match{
-    filter: invert(39%) sepia(60%) saturate(250%) hue-rotate(172deg) brightness(95%) contrast(91%);
+    filter: invert(36%) sepia(30%) saturate(527%) hue-rotate(172deg) brightness(94%) contrast(96%);
+}
+
+.stiple-img-artists{
+    filter: invert(14%) sepia(14%) saturate(4314%) hue-rotate(252deg) brightness(94%) contrast(96%);
+}
+
+.stiple-img-percent
+{
+    filter: invert(14%) sepia(14%) saturate(4314%) hue-rotate(252deg) brightness(94%) contrast(96%);
+}
+
+.stiple-img-recommended
+{
+    filter: invert(13%) sepia(14%) saturate(2209%) hue-rotate(314deg) brightness(97%) contrast(79%);
 }
