@@ -48,6 +48,7 @@ const OUR_GENRES = [
 	'samba',
 	'grime',
 	'acoustic',
+	'korean',
 ];
 
 function boostGenres(userMap) {
@@ -55,8 +56,8 @@ function boostGenres(userMap) {
 	OUR_GENRES.forEach((genre) => {
 		userMap.forEach((item, key) => {
 			if (key.includes(genre)) {
-				item.val++;
-				addedGenres++;
+				item.val += 1;
+				// addedGenres += 100;
 			}
 		});
 	});
@@ -71,7 +72,7 @@ function compare(user1, user2) {
 	const sharedGenres = matchGenres(userMap1, userMap2);
 
 	const matchValue = compatibility(sharedGenres, userMap1, userMap2);
-	return Math.ceil(matchValue * 100);
+	return Math.min(Math.floor(matchValue * 100), 100);
 }
 
 // in < user_data
@@ -94,8 +95,8 @@ function makeData({ user_data }) {
 	const [addedGenres, newMap] = boostGenres(userMap);
 	console.log(addedGenres);
 	console.log(newMap);
+	// totalGenres += addedGenres;
 
-	totalGenres += addedGenres;
 	userMap.forEach((genre) => {
 		genre.val = genre.val / totalGenres;
 	});
