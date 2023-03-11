@@ -56,7 +56,7 @@ function boostGenres(userMap) {
 	OUR_GENRES.forEach((genre) => {
 		userMap.forEach((item, key) => {
 			if (key.includes(genre)) {
-				item.val += 1;
+				item.val += 0.5;
 				// addedGenres += 100;
 			}
 		});
