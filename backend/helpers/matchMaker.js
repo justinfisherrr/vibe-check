@@ -6,6 +6,7 @@ function matchMaker(user1, user2) {
 	const topArtists = getTop5(user1, user2, 'Artist');
 	const topSongs = getTop5(user1, user2, 'Song');
 	const topGenres = getTop5(user1, user2, 'Genre');
+	console.log(topGenres);
 	const compatibility = getCompatibility(user1, user2);
 
 	const comparisonObject = {

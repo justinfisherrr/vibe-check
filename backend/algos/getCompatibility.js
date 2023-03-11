@@ -1,9 +1,74 @@
+const OUR_GENRES = [
+	'pop',
+	'rock',
+	'hiphop',
+	'jazz',
+	'blues',
+	'funk',
+	'rap',
+	'reggae',
+	'country',
+	'metal',
+	'classical',
+	'electronic',
+	'soul',
+	'r&b',
+	'folk',
+	'punk',
+	'latin',
+	'indie',
+	'house',
+	'dance',
+	'ambient',
+	'chill',
+	'disco',
+	'dub',
+	'techno',
+	'trance',
+	'trap',
+	'world',
+	'alternative',
+	'bluegrass',
+	'celtic',
+	'garage',
+	'hardcore',
+	'indiepop',
+	'jpop',
+	'kpop',
+	'metalcore',
+	'newage',
+	'postrock',
+	'ska',
+	'synthwave',
+	'vaporwave',
+	'gospel',
+	'christian',
+	'soundtrack',
+	'reggaeton',
+	'samba',
+	'grime',
+	'acoustic',
+];
+
+function boostGenres(userMap) {
+	let addedGenres = 0;
+	OUR_GENRES.forEach((genre) => {
+		userMap.forEach((item, key) => {
+			if (key.includes(genre)) {
+				item.val++;
+				addedGenres++;
+			}
+		});
+	});
+
+	return [addedGenres, userMap];
+}
+
 function compare(user1, user2) {
 	const userMap1 = makeData(user1);
 	const userMap2 = makeData(user2);
 
 	const sharedGenres = matchGenres(userMap1, userMap2);
-	console.log(sharedGenres);
 
 	const matchValue = compatibility(sharedGenres, userMap1, userMap2);
 	return Math.ceil(matchValue * 100);
@@ -26,6 +91,11 @@ function makeData({ user_data }) {
 		});
 	});
 
+	const [addedGenres, newMap] = boostGenres(userMap);
+	console.log(addedGenres);
+	console.log(newMap);
+
+	totalGenres += addedGenres;
 	userMap.forEach((genre) => {
 		genre.val = genre.val / totalGenres;
 	});
@@ -51,8 +121,8 @@ function compatibility(matchedArray, map1, map2) {
 	matchedArray.forEach((key) => {
 		const val1 = map1.get(key).val;
 		const val2 = map2.get(key).val;
-		const max = Math.max(val1, val2);
-		total += max;
+		const min = Math.min(val1, val2);
+		total += min;
 	});
 	return total;
 }
