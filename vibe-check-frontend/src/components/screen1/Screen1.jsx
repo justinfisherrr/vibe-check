@@ -11,7 +11,7 @@ function Screen1({ animationData }) {
 			</p>
 			<IntroImages animationData={animationData} />
 			<p className='screen1-text bottom-fade-in'>
-				you and <br />
+				your and <br />
 				{`${animationData.screen1.other_username}'s . . .`}
 			</p>
 		</div>
