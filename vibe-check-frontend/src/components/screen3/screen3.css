@@ -1,56 +1,99 @@
 /* screen 3 */
 .screen3-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    /* background-color: aliceblue; */
+}
+
+.screen3-title{
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #51365b;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.artist-grid{
+    
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    max-width: 200px;
+    max-height: 550px;
+    height: fit-content;
+    grid-template: 
+    'top-artist'
+    'remaining-artist'
+    'names';
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 2fr;
+    margin: auto;
 }
 
 .animation-page-artists{
     background-color: #ffd2e2;
 }
 
-.screen3-title{
-    color: aquamarine;
+.top-artist{
+    grid-area: top-artist;
+    padding-bottom: 5px;
 }
 
-.artist-name{
-    color: white;
+
+.remaining-artist{
+    grid-area: remaining-artist;
+    background-color: green;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
 }
 
-.artist-covers{
+.artist{
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+    background-color: aqua;
+    padding-block: 5px;
+}
+
+.remaining-artist-img{
+    border: 6px solid rgb(183, 255, 0);
+}
+
+.names{
+    grid-area: names;
+    background-color: gold;
+}
+
+.top-artists-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
-    height: 280px;
-    width: 672px;
-    
+    justify-content: center;
+    align-items: center;
+
 }
-.overlap-img-wrapper{
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
+
+.top-artist-img-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 70%;
+    height: 70%;
     position: absolute;
+    overflow: hidden;
 }
 
-.overlap-img-wrapper-1{
-    z-index: 5;
+.top-artist-img{
+    object-fit: cover;
 }
 
-.overlap-img-wrapper-2{
-    z-index: 4;
-    transform: translateX(140px) scale(90%);
+.sun-burst-wrapper{
+    width: 100%;
+    height: 100%;
 }
 
-.overlap-img-wrapper-3{
-    z-index: 3;
-    transform: translateX(265px) scale(80%);
+.top-artist-burst{
+    background-color: rgb(72, 0, 255);
 }
 
-.overlap-img-wrapper-4{
-    z-index: 2;
-    transform: translateX(375px) scale(70%);
-}
 
-.overlap-img-wrapper-5{
-    z-index: 1;
-    transform: translateX(470px) scale(60%);
-}
