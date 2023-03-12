@@ -30,40 +30,59 @@ function Screen3({ animationData }) {
 				</div>
 
 				<div className='remaining-artist'>
-					<div className='artist artist-2'>
+					{animationData.screen3.artist
+						.slice(1, 5)
+						.map(({ artist_img }, index) => (
+							<div className='artist'>
+								<img
+									className={`remaining-artist-img artist-img-${index + 2}`}
+									src={artist_img}
+									alt=''
+									srcset=''
+								/>
+							</div>
+						))}
+					{/* <div className='artist'>
 						<img
-							className='remaining-artist-img'
+							className='remaining-artist-img artist-img-2'
 							src={animationData.screen3.artist[1].artist_img}
 							alt=''
 							srcset=''
 						/>
 					</div>
-					<div className='artist artist-3'>
+					<div className='artist'>
 						<img
-							className='remaining-artist-img'
+							className='remaining-artist-img artist-img-3'
 							src={animationData.screen3.artist[2].artist_img}
 							alt=''
 							srcset=''
 						/>
 					</div>
-					<div className='artist artist-4'>
+					<div className='artist'>
 						<img
-							className='remaining-artist-img'
+							className='remaining-artist-img artist-img-4'
 							src={animationData.screen3.artist[3].artist_img}
 							alt=''
 							srcset=''
 						/>
 					</div>
-					<div className='artist artist-5'>
+					<div className='artist'>
 						<img
-							className='remaining-artist-img'
-							src={animationData.screen3.artist[3].artist_img}
+							className='remaining-artist-img artist-img-5'
+							src={animationData.screen3.artist[4].artist_img}
 							alt=''
 							srcset=''
 						/>
-					</div>
+					</div> */}
 				</div>
-				<div className='names'></div>
+				<div className='names'>
+					{animationData.screen3.artist.map(({ artist_name }, index) => (
+						<div className={`artist-name-wrapper artist-name-wrapper-${index}`}>
+							<p className='artist-number'>{index + 1}</p>
+							<p className='artist-name'>{artist_name}</p>
+						</div>
+					))}
+				</div>
 			</div>
 		</div>
 	);

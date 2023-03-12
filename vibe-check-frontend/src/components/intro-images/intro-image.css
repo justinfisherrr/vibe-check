@@ -1,5 +1,6 @@
 .img-container{
-    margin-block: 40px;
+    width: 100%;
+    margin-block: 8%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,12 +8,12 @@
 
 
 .left-img{
-    transform: translateX(25px);
+    transform: translateX(8%);
     
 }
 
 .right-img{
-    transform: translateX(-25px);
+    transform: translateX(-8%);
     z-index: 1;
 }
 
@@ -21,26 +22,30 @@
 }
 
 .img-wrapper{
-    width: 300px;
-    height: 300px;
+    width: 115px;
+    height: 115px;
     position: relative;
 }
 
+
+
+
+
 .circle{
     position: absolute;
-    width: 250px;
-    height: 250px;
+    width: 83%;
+    height: 83%;
     background-color: #233360;
     border-radius: 50%;
     overflow: hidden;
 }
 
-/* Right */
+/* Left */
 .left-img .circle-1{
     top: 0;
     right: 0;
     z-index: 5;
-    border: 8px solid #fca5ff;
+    border: 5px solid #fca5ff;
     
 }
 
@@ -55,7 +60,7 @@
 
 @keyframes left-telescope-2 {
     from { top: 0px; right: 0px; opacity: 0;}
-    to { top: 10px; right: 10px; opacity: 0.8;}
+    to { top: 3.4%; right: 3.4%; opacity: 0.8;}
 }
 
 .left-img .circle-3{
@@ -69,8 +74,8 @@
 
 
 @keyframes left-telescope-3 {
-    from { top: 10px; right: 10px; opacity: 0;}
-    to { top: 20px; right: 20px; opacity: 0.6;}
+    from { top: 3.4%; right: 3.4%; opacity: 0;}
+    to { top: 6.8%; right: 6.8%; opacity: 0.6;}
 }
 
 .left-img .circle-4{
@@ -83,8 +88,8 @@
 }
 
 @keyframes left-telescope-4 {
-    from { top: 20px; right: 20px; opacity: 0;}
-    to { top: 30px; right: 30px; opacity: 0.4;}
+    from { top: 6.8%; right: 6.8%; opacity: 0;}
+    to { top: 10.2%; right: 10.2%; opacity: 0.4;}
 }
 
 .left-img .circle-5{
@@ -98,8 +103,8 @@
 }
 
 @keyframes left-telescope-5 {
-    from { top: 30px; right: 30px; opacity: 0;}
-    to { top: 40px; right: 40px; opacity: 0.2;}
+    from { top: 10.2%; right: 10.2%; opacity: 0;}
+    to { top: 13.6%; right: 13.6%; opacity: 0.2;}
 }
 
 .left-img .circle-6{
@@ -112,8 +117,8 @@
 }
 
 @keyframes left-telescope-6 {
-    from { top: 40px; right: 40px; opacity: 0;}
-    to { top: 50px; right: 50px; opacity: 0.1;}
+    from { top: 13.6%; right: 13.6%; opacity: 0;}
+    to { top: 17%; right: 17%; opacity: 0.1;}
 }
 
 /* Right */
@@ -121,7 +126,7 @@
     bottom: 0;
     left: 0;
     z-index: 5;
-    border: 8px solid #feff97;
+    border: 5px solid #feff97;
 }
 
 .right-img .circle-2{
@@ -135,7 +140,7 @@
 
 @keyframes right-telescope-2 {
     from { bottom: 0px; left: 0px; opacity: 0;}
-    to { bottom: 10px; left: 10px; opacity: 0.8;}
+    to { bottom: 3.4%; left: 3.4%;  opacity: 0.8;}
 }
 
 .right-img .circle-3{
@@ -148,8 +153,8 @@
 }
 
 @keyframes right-telescope-3 {
-    from { bottom: 10px; left: 10px; opacity: 0;}
-    to { bottom: 20px; left: 20px; opacity: 0.6;}
+    from { bottom: 3.4%; left: 3.4%; opacity: 0;}
+    to { bottom: 6.8%; left: 6.8%; opacity: 0.6;}
 }
 
 
@@ -163,8 +168,8 @@
 }
 
 @keyframes right-telescope-4 {
-    from { bottom: 20px; left: 20px; opacity: 0;}
-    to { bottom: 30px; left: 30px; opacity: 0.4;}
+    from { bottom: 6.8%; left: 6.8%; opacity: 0;}
+    to { bottom: 10.2%; left: 10.2%; opacity: 0.4;}
 }
 
 .right-img .circle-5{
@@ -177,8 +182,8 @@
 }
 
 @keyframes right-telescope-5 {
-    from { bottom: 30px; left: 30px; opacity: 0;}
-    to { bottom: 40px; left: 40px; opacity: 0.2;}
+    from { bottom: 10.2%; left: 10.2%; opacity: 0;}
+    to { bottom: 13.6%; left: 13.6%; opacity: 0.2;}
 }
 
 .right-img .circle-6{
@@ -191,12 +196,12 @@
 }
 
 @keyframes right-telescope-6 {
-    from { bottom: 40px; left: 40px;  opacity: 0;}
-    to { bottom: 50px; left: 50px;  opacity: 0.1;}
+    from { bottom: 13.6%; left: 13.6%;  opacity: 0;}
+    to { bottom: 17%; left: 17%;  opacity: 0.1;}
 }
 
 .star-container{
-    width: 60px;
+    width:20%;
     position: absolute;
 }
 
@@ -212,4 +217,47 @@
     transform: scaleX(-100%);
     filter: invert(89%) sepia(42%) saturate(4800%) hue-rotate(232deg) brightness(105%) contrast(101%);
     
+}
+
+@media (min-width: 300px) {
+    .img-wrapper{
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (min-width: 350px) {
+    .img-wrapper{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 400px) {
+    .img-wrapper{
+        width: 180px;
+        height: 180px;
+    }
+
+    .circle-1{
+        border-width: 6px !important;
+    }
+}
+
+@media (min-width: 480px) {
+    .img-wrapper{
+        width: 225px;
+        height: 225px;
+    }
+}
+
+@media (min-width: 650px) {
+    .img-wrapper{
+        width: 300px;
+        height: 300px;
+    }
+
+    .circle-1{
+        border-width: 8px !important;
+    }
 }
