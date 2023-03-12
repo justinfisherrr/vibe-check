@@ -1,36 +1,19 @@
 import React from 'react';
 import './screen1.css';
-import defaultImg from '../../images/default-user-image.svg';
+import IntroImages from '../intro-images/IntroImages';
 
 function Screen1({ animationData }) {
 	return (
-		<div className='screen1-content fade-in'>
-			<p className='screen1-text'>Did you know that</p>
-			<div className='img-container'>
-				<div className='img-wrapper left-img'>
-					<img
-						src={
-							animationData.screen1.user1_image === ''
-								? defaultImg
-								: animationData.screen1.user1_image
-						}
-						className='profile-img'
-						alt=''
-					/>
-				</div>
-				<div className='img-wrapper right-img'>
-					<img
-						src={
-							animationData.screen1.user2_image === ''
-								? defaultImg
-								: animationData.screen1.user2_image
-						}
-						className='profile-img'
-						alt=''
-					/>
-				</div>
-			</div>
-			<p className='screen1-text'>{`you and ${animationData.screen1.other_username} . . .`}</p>
+		<div className='screen1-content'>
+			<p className='screen1-text top-fade-in'>
+				Did you know <br />
+				that
+			</p>
+			<IntroImages animationData={animationData} />
+			<p className='screen1-text bottom-fade-in'>
+				you and <br />
+				{`${animationData.screen1.other_username}'s . . .`}
+			</p>
 		</div>
 	);
 }

@@ -1,6 +1,6 @@
 /* screen 1 */
 .screen1-content{
-max-width: 550px;
+/* max-width: 600px; */
 }
 
 .animation-page-intro{
@@ -16,30 +16,14 @@ max-width: 550px;
     color: white;
 }
 
-.img-container{
-    margin-block: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.top-fade-in{
+    opacity: 0;
+    animation: fade-in 0.5s ease-in-out  forwards ;
+    animation-delay: 1s;
 }
 
-.img-wrapper{
-    width: 250px;
-    height:250px;
-    border-radius: 500px;
-    overflow: hidden;
-
-}
-
-.left-img{
-    transform: translateX(25px);
-    z-index: 1;
-}
-
-.right-img{
-    transform: translateX(-25px);
-}
-
-.profile-img{
-    width: 100%;
+.bottom-fade-in{
+    opacity: 0;
+    animation: fade-in 0.5s ease-in-out  forwards ;
+    animation-delay: 2s;
 }
