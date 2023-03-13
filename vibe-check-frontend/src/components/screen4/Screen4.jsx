@@ -3,9 +3,10 @@ import './screen4.css';
 
 function Screen4({ animationData }) {
 	return (
-		<div className='screen screen4-content fade-in'>
-			{/* <div className='artist-covers'>
-				{animationData.match_profile.matching_songs.map(
+		<div className='screen4-content'>
+			<h1 className='screen4-title fade-in'>MATCHING SONGS ARE</h1>
+			<div className='artist-covers'>
+				{animationData.users.user2.recommended_songs.map(
 					({ song_img }, index) => {
 						return (
 							<div
@@ -17,12 +18,20 @@ function Screen4({ animationData }) {
 						);
 					}
 				)}
-			</div> */}
-			<h1 className='titles screen4-title'>MATCHING SONGS ARE</h1>
-			<div className='artist-names'>
-				{animationData.match_profile.matching_songs.map(({ song_name }) => {
-					return <p className='artist-name sub-texts'>• {song_name}</p>;
-				})}
+			</div>
+
+			<div className='song-data song-fade-in'>
+				{animationData.users.user2.recommended_songs.map(
+					({ song_name, artist_name }, index) => (
+						<div className='single-song-data-wrapper'>
+							<p className='song-index'>#{index + 1}</p>
+							<div className='single-song-text'>
+								<p className='single-song-name'>{song_name}</p>
+								<p className='single-artist-name'>{artist_name}</p>
+							</div>
+						</div>
+					)
+				)}
 			</div>
 		</div>
 	);

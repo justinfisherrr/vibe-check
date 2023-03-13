@@ -1,24 +1,7 @@
 import React from 'react';
 import './but-here.css';
 
-export default function ButHere({ animationData, type }) {
-	const words = [
-		'based',
-		'on',
-		'your',
-		'matching',
-		'genres',
-		'here',
-		'is',
-		'what',
-		type,
-		animationData.users.user2.username,
-		'recommends',
-		'.',
-		'.',
-		'.',
-		'☺',
-	];
+export default function ButHere({ words, type }) {
 	return (
 		<div className='recommened-page-content'>
 			<p className='recommend-page-text'>
@@ -26,7 +9,13 @@ export default function ButHere({ animationData, type }) {
 					return (
 						<span
 							key={index}
-							className={`word fade-in ${word === 'Artists' ? 'color' : ''}`}
+							className={`word fade-in ${
+								word === type
+									? type === 'Artists'
+										? 'artists-color'
+										: 'song-color'
+									: ''
+							}`}
 							style={{ animationDelay: `${0.15 * index}s` }}>
 							{' '}
 							{word}

@@ -20,6 +20,42 @@ export default function useScreens() {
 	styles.push('intro');
 	screens.push(<Screen1 animationData={animationData} />);
 
+	const artistsWords = [
+		'based',
+		'on',
+		'your',
+		'matching',
+		'genres',
+		'here',
+		'is',
+		'what',
+		'Artists',
+		animationData.users.user2.username,
+		'recommends',
+		'.',
+		'.',
+		'.',
+		'☺',
+	];
+
+	const songWords = [
+		'based',
+		'on',
+		'your',
+		'matching',
+		'genres',
+		'here',
+		'is',
+		'what',
+		'Songs',
+		animationData.users.user2.username,
+		'recommends',
+		'.',
+		'.',
+		'.',
+		'☺',
+	];
+
 	// Genres
 	if (animationData.match_profile.matching_genres.length === 0) {
 		styles.push('no-match');
@@ -43,8 +79,8 @@ export default function useScreens() {
 				<NoMatches animationData={animationData} type={'Artists'} />
 			);
 
-			styles.push('but-here');
-			screens.push(<ButHere animationData={animationData} type={'Artists'} />);
+			styles.push('but-here-artists');
+			screens.push(<ButHere type={'Artists'} words={artistsWords} />);
 
 			styles.push('recommended');
 			screens.push(<RecommendedArtists animationData={animationData} />);
@@ -52,8 +88,8 @@ export default function useScreens() {
 			styles.push('artists');
 			screens.push(<Screen3 animationData={animationData} />);
 
-			styles.push('but-here');
-			screens.push(<ButHere animationData={animationData} type={'Artists'} />);
+			styles.push('but-here-artists');
+			screens.push(<ButHere type={'Artists'} words={artistsWords} />);
 
 			styles.push('recommended');
 			screens.push(<RecommendedArtists animationData={animationData} />);
@@ -64,8 +100,8 @@ export default function useScreens() {
 			styles.push('no-match');
 			screens.push(<NoMatches animationData={animationData} type={'Songs'} />);
 
-			styles.push('but-here');
-			screens.push(<ButHere animationData={animationData} type={'Songs'} />);
+			styles.push('but-here-songs');
+			screens.push(<ButHere words={songWords} type={'Songs'} />);
 
 			styles.push('recommended');
 			screens.push(<RecommendedSongs animationData={animationData} />);
@@ -73,8 +109,8 @@ export default function useScreens() {
 			styles.push('songs');
 			screens.push(<Screen4 animationData={animationData} />);
 
-			styles.push('but-here');
-			screens.push(<ButHere animationData={animationData} type={'Songs'} />);
+			styles.push('but-here-songs');
+			screens.push(<ButHere words={songWords} type={'Songs'} />);
 
 			styles.push('recommended');
 			screens.push(<RecommendedSongs animationData={animationData} />);

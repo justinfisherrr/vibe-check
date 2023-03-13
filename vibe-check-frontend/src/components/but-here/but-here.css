@@ -1,10 +1,15 @@
-.animation-page-but-here{
+.animation-page-but-here-artists{
     background-color: #8449a6;
 }
 
-.color{
+.artists-color{
     color: rgb(229, 147, 191) !important;
 }
+
+.song-color{
+    color: #dafbff !important;
+}
+
 
 .recommened-page-content{
     max-width: 100%;
@@ -15,6 +20,7 @@
     /* display: flex;
     flex-wrap: wrap; */
     text-align: center;
+    
 }
 
 .word{
@@ -22,7 +28,7 @@
     line-height: min(10vw, 60px);
     font-weight: 800;
     text-transform: uppercase;
-    color: white;
+    color: rgb(240, 217, 255);
     opacity: 0;
 }
 
