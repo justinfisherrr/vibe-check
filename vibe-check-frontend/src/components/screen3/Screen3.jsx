@@ -4,7 +4,7 @@ import sunBurst from '../../images/sun-burst.svg';
 
 function Screen3({ animationData }) {
 	return (
-		<div className='screen3-content'>
+		<div className='screen3-content fade-in'>
 			<h1 className='screen3-title fade-in'>Matching Artists Are</h1>
 			<div className='artist-grid'>
 				<div className='top-artist'>
