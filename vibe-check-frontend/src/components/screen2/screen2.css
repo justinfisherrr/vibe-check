@@ -107,32 +107,32 @@
 }
 
 .genre-wrapper-1{
-    animation: test 0.6s ease-in-out 0.2s forwards;
+    animation: slide-in 0.6s ease-in-out 0.2s forwards;
     transform: translateX(20vw);
     opacity: 0;
 }
 
 .genre-wrapper-2{
-    animation: test 0.6s ease-in-out 0.3s forwards;
+    animation: slide-in 0.6s ease-in-out 0.3s forwards;
     transform: translateX(20vw);
     opacity: 0;
     
 }
 
 .genre-wrapper-3{
-    animation: test 0.6s ease-in-out 0.4s forwards;
+    animation: slide-in 0.6s ease-in-out 0.4s forwards;
     transform: translateX(20vw);
     opacity: 0;
 }
 
 .genre-wrapper-4{
-    animation: test 0.6s ease-in-out 0.5s forwards;
+    animation: slide-in 0.6s ease-in-out 0.5s forwards;
     transform: translateX(20vw);
     opacity: 0;
 }
 
 .genre-wrapper-5{
-    animation: test 0.6s ease-in-out 0.6s forwards;
+    animation: slide-in 0.6s ease-in-out 0.6s forwards;
     transform: translateX(20vw);
     opacity: 0;
 }
@@ -140,7 +140,7 @@
 
 
 
-@keyframes test {
+@keyframes slide-in {
     0% {
         transform: translateX(20vw);
         opacity: 0;
@@ -180,70 +180,6 @@
 
     
 }
-
-/* @media screen and (min-width: 400px){
-    .screen2-title{
-        font-size: 45px;
-        line-height: 50px;
-    }
-
-    .genre-list{
-        grid-template-rows: 114px 114px 114px 114px 114px; 
-    }
-    
-    .genre-text-wrapper{
-        transform: translateY(14px);
-    }
-    
-    .genre-text {
-        font-size: 24px;
-        line-height: 21px;
-        height: 21px;
-        max-width: 240px;
-    }
-
-    .genre-info{
-        margin-top: 30px;
-    }
-    
-    .genre-list{
-        row-gap: 20px;
-    }
-} */
-
-/* @media screen and (min-width: 480px){
-    .screen2-title{
-        font-size: 50px;
-        line-height: 50px;
-    }
-
-    .genre-list{
-        grid-template-rows: 124px 124px 124px 124px 124px; 
-        row-gap: 10px;
-    }
-
-    .genre-text-wrapper{
-        display: flex;
-        flex-direction: column;
-        transform: translateY(18px);
-    }
-
-    
-    .genre-text {
-        font-size: 28px;
-        line-height: 24px;
-        height: 23px;
-        max-width: 280px;
-        margin-left: 20px;
-    }
-
-    .genre-info{
-        margin-top: 34px;
-        margin-left: 20px;
-    }
-    
-
-} */
 
 @media screen and (min-width: 1000px){
     .screen2-title{

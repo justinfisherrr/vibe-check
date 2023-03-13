@@ -14,7 +14,7 @@
     object-fit: cover;
 }
 
-.waves-top-no-match, .waves-bottom-no-match, .waves-top-but-here, .waves-bottom-but-here{
+.waves-top-no-match, .waves-bottom-no-match{
     filter: invert(97%) sepia(3%) saturate(0%) hue-rotate(253deg) brightness(103%) contrast(103%);
 }
 

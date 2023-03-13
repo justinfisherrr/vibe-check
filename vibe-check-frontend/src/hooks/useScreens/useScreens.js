@@ -8,7 +8,8 @@ import Screen4 from '../../components/screen4/Screen4';
 import Screen5 from '../../components/screen5/Screen5';
 
 import NoMatches from '../../components/no-matches/NoMatches';
-import Recommended from '../../components/recommended/Recommended';
+import RecommendedArtists from '../../components/recommended-artists/RecommendedArtists';
+import RecommendedSongs from '../../components/recommended-songs/RecommendedSongs';
 import ButHere from '../../components/but-here/ButHere';
 
 export default function useScreens() {
@@ -46,7 +47,7 @@ export default function useScreens() {
 			screens.push(<ButHere animationData={animationData} type={'Artists'} />);
 
 			styles.push('recommended');
-			screens.push(<Recommended animationData={animationData} />);
+			screens.push(<RecommendedArtists animationData={animationData} />);
 		} else {
 			styles.push('artists');
 			screens.push(<Screen3 animationData={animationData} />);
@@ -55,7 +56,7 @@ export default function useScreens() {
 			screens.push(<ButHere animationData={animationData} type={'Artists'} />);
 
 			styles.push('recommended');
-			screens.push(<Recommended animationData={animationData} />);
+			screens.push(<RecommendedArtists animationData={animationData} />);
 		}
 
 		// Songs
@@ -67,7 +68,7 @@ export default function useScreens() {
 			screens.push(<ButHere animationData={animationData} type={'Songs'} />);
 
 			styles.push('recommended');
-			screens.push(<Recommended animationData={animationData} />);
+			screens.push(<RecommendedSongs animationData={animationData} />);
 		} else {
 			styles.push('songs');
 			screens.push(<Screen4 animationData={animationData} />);
@@ -76,7 +77,7 @@ export default function useScreens() {
 			screens.push(<ButHere animationData={animationData} type={'Songs'} />);
 
 			styles.push('recommended');
-			screens.push(<Recommended animationData={animationData} />);
+			screens.push(<RecommendedSongs animationData={animationData} />);
 		}
 	}
 

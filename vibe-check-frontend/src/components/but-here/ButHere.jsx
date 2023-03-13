@@ -26,7 +26,7 @@ export default function ButHere({ animationData, type }) {
 					return (
 						<span
 							key={index}
-							className='word fade-in'
+							className={`word fade-in ${word === 'Artists' ? 'color' : ''}`}
 							style={{ animationDelay: `${0.15 * index}s` }}>
 							{' '}
 							{word}

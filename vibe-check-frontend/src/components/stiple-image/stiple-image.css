@@ -13,20 +13,15 @@
 .stiple-img-no-match {
     filter: invert(36%) sepia(30%) saturate(527%) hue-rotate(172deg) brightness(94%) contrast(96%);
 }
-.stiple-img-but-here{
+/* .stiple-img-but-here{
 filter: invert(88%) sepia(10%) saturate(5522%) hue-rotate(184deg) brightness(96%) contrast(119%);
-}
+} */
 
-.stiple-img-artists{
+.stiple-img-artists,.stiple-img-but-here, .stiple-img-recommended{
     filter: invert(79%) sepia(30%) saturate(287%) hue-rotate(277deg) brightness(105%) contrast(99%);
 }
 
 .stiple-img-percent
 {
     filter: invert(14%) sepia(14%) saturate(4314%) hue-rotate(252deg) brightness(94%) contrast(96%);
-}
-
-.stiple-img-recommended
-{
-    filter: invert(13%) sepia(14%) saturate(2209%) hue-rotate(314deg) brightness(97%) contrast(79%);
 }

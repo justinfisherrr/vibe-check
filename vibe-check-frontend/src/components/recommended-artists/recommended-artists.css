@@ -1,0 +1,243 @@
+.animation-page-recommended{
+    background-color: #8449a6;
+}
+
+.recommended-content{
+    
+}
+
+.recommended-title{
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.recommended-grid{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 10px;
+    margin: auto;
+}
+
+.recommended-item-wrapper{
+    display: grid;
+    grid-template-columns: 40px 60px 1fr;
+    column-gap: 10px;
+    color: rgb(0, 0, 0);
+
+    opacity: 0;
+}
+
+.recommended-item-wrapper-0{
+    transform: translateX(10vw);
+    animation: slide-in-right 0.5s ease-in-out 0.2s forwards;
+}
+
+.recommended-item-wrapper-1{
+    transform: translateX(-10vw);
+    animation: slide-in-left 0.5s ease-in-out 0.3s forwards;
+}
+
+.recommended-item-wrapper-2{
+    transform: translateX(10vw);
+    animation: slide-in-right 0.5s ease-in-out 0.4s forwards;
+}
+
+.recommended-item-wrapper-3{
+    transform: translateX(-10vw);
+    animation: slide-in-left 0.5s ease-in-out 0.5s forwards;
+}
+
+.recommended-item-wrapper-4{
+    transform: translateX(10vw);
+    animation: slide-in-right 0.5s ease-in-out 0.6s forwards;
+}
+
+.recommended-index{
+    font-size: 25px;
+    font-weight: 700;
+    width: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.recommended-img-wrapper{
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+    position: relative;
+    
+    border-radius: 5%;
+}
+
+.recommended-img-wrapper-0{
+    border: 5px solid rgb(229, 147, 191);
+    
+}
+
+.recommended-img-wrapper-1{
+    border: 5px solid rgb(1, 190, 44);
+}
+
+.recommended-img-wrapper-2{
+    border: 5px solid rgb(255, 144, 0);
+}
+
+.recommended-img-wrapper-3{
+    border: 5px solid rgb(255, 216, 0);
+}
+
+.recommended-img-wrapper-4{
+    border: 5px solid rgb(211, 15, 65);
+}
+
+
+
+.recommended-img{
+    object-fit: cover;
+    position: absolute;
+}
+
+.recommended-data-wrapper{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.recommended-data{
+    position: absolute;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(10vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-10vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@media (min-width: 300px){
+    .recommended-title{
+        font-size: 32px;
+        line-height: 35px;
+    }
+}
+
+@media (min-width: 350px){
+    .recommended-title{
+        font-size: 38px;
+        line-height: 42px;
+    }
+
+    .recommended-item-wrapper{
+        grid-template-columns: 40px 65px 1fr;
+    }
+
+    .recommended-img-wrapper{
+        height: 65px;
+        width: 65px;
+    }
+}
+
+@media (min-width: 400px){
+    .recommended-title{
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    .recommended-item-wrapper{
+        grid-template-columns: 50px 70px 1fr;
+    }
+
+    .recommended-index{
+        font-size: 30px;
+    }
+
+    .recommended-img-wrapper{
+        height: 70px;
+        width: 70px;
+    }
+
+    .recommended-data{
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 480px){
+    .recommended-title{
+        font-size: 50px;
+        line-height: 55px;
+    }
+
+    .recommended-item-wrapper{
+        grid-template-columns: 50px 80px 1fr;
+    }
+
+    .recommended-index{
+        font-size: 30px;
+    }
+
+    .recommended-img-wrapper{
+        height: 80px;
+        width: 80px;
+    }
+
+    .recommended-data{
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 550px){
+    .recommended-content{
+    }
+
+    .recommended-grid{
+        max-width: 550px;
+        row-gap: 15px;
+    }
+    
+    .recommended-title{
+        font-size: 60px;
+        line-height: 65px;
+    }
+
+    .recommended-item-wrapper{
+        grid-template-columns: 60px 90px 1fr;
+    }
+
+    .recommended-index{
+        font-size: 35px;
+    }
+
+    .recommended-img-wrapper{
+        height: 90px;
+        width: 90px;
+    }
+
+    .recommended-data{
+        font-size: 30px;
+    }
+}
