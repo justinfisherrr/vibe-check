@@ -12,7 +12,7 @@ function Screen1({ animationData }) {
 			<IntroImages animationData={animationData} />
 			<p className='screen1-text bottom-fade-in'>
 				your and <br />
-				{`${animationData.screen1.other_username}'s . . .`}
+				{`${animationData.users.user2.username}'s . . .`}
 			</p>
 		</div>
 	);

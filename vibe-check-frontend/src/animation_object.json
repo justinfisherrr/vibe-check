@@ -1,49 +1,114 @@
 {
-    "screen1": {
-        "user1_image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80",
-        "user2_image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80",
-        "other_username": "Lisa"
+    "users": {
+        "user1": {
+            "profile_img": "https://i.scdn.co/image/ab6775700000ee857dadf119d37f733667e97b3b",
+            "username": "Sadie",
+            "id": "user_id",
+            "top_genres": ["genre"],
+            "top_artists": [
+                {
+                    "artist_name": "SZA",
+                    "artist_img": "https://i.scdn.co/image/ab6761610000e5eb7eb7f6371aad8e67e01f0a03",
+                    "genres": ["pop", "r&b"]
+                }
+            ],
+            "top_songs": [
+                {
+                    "song_name": "Money",
+                    "artist_name": "The Drums",
+                    "song_img": "https://i.scdn.co/image/ab67616d0000b273133102973816a5cd4f77a6e0"
+                }
+            ]
+        },
+        "user2": {
+            "profile_img": "https://i.scdn.co/image/ab6775700000ee857dadf119d37f733667e97b3b",
+            "username": "Sadie",
+            "id": "user_id",
+            "top_genres": ["genre"],
+            "top_artists": [
+                {
+                    "artist_name": "SZA",
+                    "artist_img": "https://i.scdn.co/image/ab6761610000e5eb7eb7f6371aad8e67e01f0a03",
+                    "genres": ["pop", "r&b"]
+                }
+            ],
+            "top_songs": [
+                {
+                    "song_name": "Money",
+                    "artist_name": "The Drums",
+                    "song_img": "https://i.scdn.co/image/ab67616d0000b273133102973816a5cd4f77a6e0"
+                }
+            ],
+            "recommended_artists": [
+                {
+                    "artist_name": "SZA",
+                    "artist_img": "https://i.scdn.co/image/ab6761610000e5eb7eb7f6371aad8e67e01f0a03",
+                    "genres": ["pop", "r&b"]
+                }
+            ],
+            "recommended_songs": [
+                {
+                    "song_name": "Money",
+                    "artist_name": "The Drums",
+                    "song_img": "https://i.scdn.co/image/ab67616d0000b273133102973816a5cd4f77a6e0"
+                }
+            ]
+        }
     },
-    "screen2": {
-        "genres":[]
-    },
-    "screen3": {
-        "artist": [{
-            "artist_name": "Artist artist_name",
-            "artist_images": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
-        },{
-            "artist_name": "Artist artist_name",
-            "artist_images": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
-        },{
-            "artist_name": "Artist artist_name",
-            "artist_images": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
-        },{
-            "artist_name": "Artist artist_name",
-            "artist_images": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
-        },{
-            "artist_name": "Artist artist_name",
-            "artist_images": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
-        }]
-    },
-    "screen4": {
-        "song": [{
-            "song_name": "Song Name",
-            "song_img": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
-        },{
-            "song_name": "Song Name",
-            "song_img": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
-        },{
-            "song_name": "Song Name",
-            "song_img": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
-        },{
-            "song_name": "Song Name",
-            "song_img": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
-        },{
-            "song_name": "Song Name",
-            "song_img": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
-        }]
-    },
-    "screen5": {
-        "match": 78
+    "match_profile": {
+        "matching_genres": [
+            "indie r&b",
+            "pop",
+            "modern indie pop",
+            "chillwave",
+            "art pop"
+        ],
+        "matching_artists": [
+            {
+                "artist_name": "SZA",
+                "artist_img": "https://i.scdn.co/image/ab6761610000e5eb7eb7f6371aad8e67e01f0a03",
+                "genres": ["pop", "r&b"]
+            },                {
+                "artist_name": "SZA",
+                "artist_img": "https://i.scdn.co/image/ab6761610000e5eb7eb7f6371aad8e67e01f0a03",
+                "genres": ["pop", "r&b"]
+            },                {
+                "artist_name": "SZA",
+                "artist_img": "https://i.scdn.co/image/ab6761610000e5eb7eb7f6371aad8e67e01f0a03",
+                "genres": ["pop", "r&b"]
+            },                {
+                "artist_name": "SZA",
+                "artist_img": "https://i.scdn.co/image/ab6761610000e5eb7eb7f6371aad8e67e01f0a03",
+                "genres": ["pop", "r&b"]
+            },                {
+                "artist_name": "SZA",
+                "artist_img": "https://i.scdn.co/image/ab6761610000e5eb7eb7f6371aad8e67e01f0a03",
+                "genres": ["pop", "r&b"]
+            }
+        ],
+        "matching_songs": [
+            {
+                "song_name": "Money",
+                "artist_name": "The Drums",
+                "song_img": "https://i.scdn.co/image/ab67616d0000b273133102973816a5cd4f77a6e0"
+            },            {
+                "song_name": "Money",
+                "artist_name": "The Drums",
+                "song_img": "https://i.scdn.co/image/ab67616d0000b273133102973816a5cd4f77a6e0"
+            },            {
+                "song_name": "Money",
+                "artist_name": "The Drums",
+                "song_img": "https://i.scdn.co/image/ab67616d0000b273133102973816a5cd4f77a6e0"
+            },            {
+                "song_name": "Money",
+                "artist_name": "The Drums",
+                "song_img": "https://i.scdn.co/image/ab67616d0000b273133102973816a5cd4f77a6e0"
+            },            {
+                "song_name": "Money",
+                "artist_name": "The Drums",
+                "song_img": "https://i.scdn.co/image/ab67616d0000b273133102973816a5cd4f77a6e0"
+            }
+        ],
+        "match_percent": 99
     }
 }

@@ -1,22 +1,23 @@
 import React from 'react';
-import './no-matches.css';
+import './but-here.css';
 
-export default function NoMatches({ animationData, type }) {
+export default function ButHere({ animationData, type }) {
 	const words = [
-		'it',
-		'looks',
-		'like',
-		'you',
-		'and',
-		animationData.users.user2.username,
-		'have',
-		'no',
+		'based',
+		'on',
+		'your',
 		'matching',
+		'genres',
+		'here',
+		'is',
+		'what',
 		type,
+		animationData.users.user2.username,
+		'recommends',
 		'.',
 		'.',
 		'.',
-		'☹',
+		'☺',
 	];
 	return (
 		<div className='recommened-page-content'>

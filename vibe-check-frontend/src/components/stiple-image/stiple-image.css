@@ -10,8 +10,11 @@
     filter: invert(22%) sepia(21%) saturate(914%) hue-rotate(235deg) brightness(94%) contrast(92%);
 }
 
-.stiple-img-no-match{
+.stiple-img-no-match {
     filter: invert(36%) sepia(30%) saturate(527%) hue-rotate(172deg) brightness(94%) contrast(96%);
+}
+.stiple-img-but-here{
+filter: invert(88%) sepia(10%) saturate(5522%) hue-rotate(184deg) brightness(96%) contrast(119%);
 }
 
 .stiple-img-artists{

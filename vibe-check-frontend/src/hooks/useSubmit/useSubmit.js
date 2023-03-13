@@ -1,5 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
 import { animationContext } from '../../context/animationContext';
+import fakeData from '../../animation_object.json';
 import axios from 'axios';
 
 export default function useSubmit(username, setResponseData) {
@@ -27,7 +28,7 @@ export default function useSubmit(username, setResponseData) {
 			);
 
 			setResponseData(res.data.data);
-			setAnimationData(res.data.data);
+			setAnimationData(fakeData);
 			setState({ input: null });
 		};
 		if (state) {

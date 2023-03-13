@@ -12,7 +12,7 @@ function Screen3({ animationData }) {
 						<div className='top-artist-img-wrapper'>
 							<img
 								className='top-artist-img'
-								src={animationData.screen3.artist[0].artist_img}
+								src={animationData.match_profile.matching_artists[0].artist_img}
 								alt=''
 								srcset=''
 							/>
@@ -30,7 +30,7 @@ function Screen3({ animationData }) {
 				</div>
 
 				<div className='remaining-artist'>
-					{animationData.screen3.artist
+					{animationData.match_profile.matching_artists
 						.slice(1, 5)
 						.map(({ artist_img }, index) => (
 							<div className='artist'>
@@ -42,46 +42,17 @@ function Screen3({ animationData }) {
 								/>
 							</div>
 						))}
-					{/* <div className='artist'>
-						<img
-							className='remaining-artist-img artist-img-2'
-							src={animationData.screen3.artist[1].artist_img}
-							alt=''
-							srcset=''
-						/>
-					</div>
-					<div className='artist'>
-						<img
-							className='remaining-artist-img artist-img-3'
-							src={animationData.screen3.artist[2].artist_img}
-							alt=''
-							srcset=''
-						/>
-					</div>
-					<div className='artist'>
-						<img
-							className='remaining-artist-img artist-img-4'
-							src={animationData.screen3.artist[3].artist_img}
-							alt=''
-							srcset=''
-						/>
-					</div>
-					<div className='artist'>
-						<img
-							className='remaining-artist-img artist-img-5'
-							src={animationData.screen3.artist[4].artist_img}
-							alt=''
-							srcset=''
-						/>
-					</div> */}
 				</div>
 				<div className='names'>
-					{animationData.screen3.artist.map(({ artist_name }, index) => (
-						<div className={`artist-name-wrapper artist-name-wrapper-${index}`}>
-							<p className='artist-number'>{index + 1}</p>
-							<p className='artist-name'>{artist_name}</p>
-						</div>
-					))}
+					{animationData.match_profile.matching_artists.map(
+						({ artist_name }, index) => (
+							<div
+								className={`artist-name-wrapper artist-name-wrapper-${index}`}>
+								<p className='artist-number'>{index + 1}</p>
+								<p className='artist-name'>{artist_name}</p>
+							</div>
+						)
+					)}
 				</div>
 			</div>
 		</div>

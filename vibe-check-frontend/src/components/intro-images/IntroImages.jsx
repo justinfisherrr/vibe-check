@@ -10,9 +10,9 @@ export default function IntroImages({ animationData }) {
 				<div className='circle circle-1'>
 					<img
 						src={
-							animationData.screen1.user1_image === ''
+							animationData.users.user1.profile_img === ''
 								? defaultImg
-								: animationData.screen1.user1_image
+								: animationData.users.user1.profile_img
 						}
 						className='profile-img'
 						alt=''
@@ -31,9 +31,9 @@ export default function IntroImages({ animationData }) {
 				<div className='circle circle-1'>
 					<img
 						src={
-							animationData.screen1.user2_image === ''
+							animationData.users.user2.profile_image === ''
 								? defaultImg
-								: animationData.screen1.user2_image
+								: animationData.users.user2.profile_img
 						}
 						className='profile-img'
 						alt=''

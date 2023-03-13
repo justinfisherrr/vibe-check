@@ -8,7 +8,7 @@ function Screen5({ animationData }) {
 			<h1 className='titles screen5-title'>MATCH PERCENT IS</h1>
 			<div className='precent-wrapper'>
 				<div className='percent'>
-					{animationData.screen5.match}
+					{animationData.match_profile.match_percent}
 					<span className='small-percent'>%</span>
 				</div>
 				<img className='burst' src={burst} alt='' />

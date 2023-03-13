@@ -9,6 +9,7 @@ import Screen5 from '../../components/screen5/Screen5';
 
 import NoMatches from '../../components/no-matches/NoMatches';
 import Recommended from '../../components/recommended/Recommended';
+import ButHere from '../../components/but-here/ButHere';
 
 export default function useScreens() {
 	const [animationData, setAnimationData] = useContext(animationContext);
@@ -19,35 +20,63 @@ export default function useScreens() {
 	screens.push(<Screen1 animationData={animationData} />);
 
 	// Genres
-	if (animationData.screen2.genres.length === 0) {
+	if (animationData.match_profile.matching_genres.length === 0) {
 		styles.push('no-match');
-		screens.push(<NoMatches animationData={animationData} />);
+		screens.push(<NoMatches animationData={animationData} type={'Genres'} />);
 	} else {
 		styles.push('genres');
-		screens.push(<Screen2 animationData={animationData} />);
+		screens.push(
+			<Screen2
+				genres={animationData.match_profile.matching_genres}
+				text={'Matching'}
+			/>
+		);
 
 		// Artists
-		if (animationData.screen3.artist.length === 0) {
+		if (animationData.match_profile.matching_artists.length === 0) {
+			styles.push('artists');
+			screens.push(<Screen3 animationData={animationData} />);
+
 			styles.push('no-match');
-			screens.push(<NoMatches animationData={animationData} />);
+			screens.push(
+				<NoMatches animationData={animationData} type={'Artists'} />
+			);
+
+			styles.push('but-here');
+			screens.push(<ButHere animationData={animationData} type={'Artists'} />);
 
 			styles.push('recommended');
 			screens.push(<Recommended animationData={animationData} />);
 		} else {
 			styles.push('artists');
 			screens.push(<Screen3 animationData={animationData} />);
+
+			styles.push('but-here');
+			screens.push(<ButHere animationData={animationData} type={'Artists'} />);
+
+			styles.push('recommended');
+			screens.push(<Recommended animationData={animationData} />);
 		}
 
 		// Songs
-		if (animationData.screen4.song.length === 0) {
+		if (animationData.match_profile.matching_songs.length === 0) {
 			styles.push('no-match');
-			screens.push(<NoMatches animationData={animationData} />);
+			screens.push(<NoMatches animationData={animationData} type={'Songs'} />);
+
+			styles.push('but-here');
+			screens.push(<ButHere animationData={animationData} type={'Songs'} />);
 
 			styles.push('recommended');
 			screens.push(<Recommended animationData={animationData} />);
 		} else {
 			styles.push('songs');
 			screens.push(<Screen4 animationData={animationData} />);
+
+			styles.push('but-here');
+			screens.push(<ButHere animationData={animationData} type={'Songs'} />);
+
+			styles.push('recommended');
+			screens.push(<Recommended animationData={animationData} />);
 		}
 	}
 
