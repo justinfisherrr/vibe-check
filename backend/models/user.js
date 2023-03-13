@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
         artist_name: String,
         artist_img: String,
         genres: [String],
+        artist_id: String,
       },
     ],
     top_songs: [
@@ -19,6 +20,7 @@ const userSchema = new mongoose.Schema({
         song_name: String,
         artist_name: String,
         song_img: String,
+        song_id: String,
       },
     ],
     liked_songs: [
