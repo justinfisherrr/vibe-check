@@ -52,16 +52,15 @@ const OUR_GENRES = [
 ];
 
 function boostGenres(userMap) {
-  let addedGenres = 0;
+  //let addedGenres = 0;
   OUR_GENRES.forEach((genre) => {
-    userMap.forEach((genreArr) => {
-      if (genreArr[0].includes(genre)) {
-        genreArr[1] = parseInt(genreArr[1]) + 0.75;
+    userMap.forEach((item, key) => {
+      if (key.includes(genre)) {
+        item.val += 0.75;
         // addedGenres += 100;
       }
     });
   });
-  return [addedGenres, userMap];
 }
 
 function compare(user1, user2) {
@@ -69,19 +68,20 @@ function compare(user1, user2) {
   const userMap2 = makeData(user2);
 
   const sharedGenres = matchGenres(userMap1, userMap2);
-
   const matchValue = compatibility(sharedGenres, userMap1, userMap2);
+  console.log(matchValue * 100);
   return Math.min(Math.floor(matchValue * 100), 100);
 }
 
 function makeData({ user_data }) {
   let totalGenres = user_data.total_genres;
-  let userMap = user_data.top_genres;
-  const [addedGenres, newMap] = boostGenres(userMap);
+  const userMap = user_data.top_genres;
+  boostGenres(userMap);
   // totalGenres += addedGenres;
-  userMap.forEach((genreArr) => {
-    genreArr[1] = genreArr[1] / totalGenres;
+  userMap.forEach((genre) => {
+    genre.val = genre.val / totalGenres;
   });
+
   return userMap;
 }
 

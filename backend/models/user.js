@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
         genres: [String],
       },
     ],
-    top_genres: [[String, Number]],
+    top_genres: { type: Map, of: Object },
     total_genres: Number,
   },
 });

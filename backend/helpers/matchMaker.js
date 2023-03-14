@@ -5,17 +5,22 @@ const getTop5Items = require("../parsers/getTop5Items");
 const getTop5Genres = require("../parsers/getTop5Genres");
 
 function matchMaker(user1, user2) {
+  const user1TopGenres = getTop5Genres(user1);
+  const user2TopGenres = getTop5Genres(user2);
+
   const matchedArtists = getMatches(user1, user2, "Artist");
   const matchedSongs = getMatches(user1, user2, "Song");
   const matchedGenres = getMatches(user1, user2, "Genre");
+
   const compatibility = getCompatibility(user1, user2);
+
   const responseObject = {
     users: {
       user1: {
         profile_img: user1.user_info.profile_img,
         username: user1.user_info.username,
         id: user1.user_info.user_id,
-        top_genres: getTop5Genres(user1),
+        top_genres: user1TopGenres,
         top_artists: getTop5Items(user1.user_data.top_artists),
         top_songs: getTop5Items(user1.user_data.top_songs),
       },
@@ -23,7 +28,7 @@ function matchMaker(user1, user2) {
         profile_img: user2.user_info.profile_img,
         username: user2.user_info.username,
         id: user2.user_info.user_id,
-        top_genres: getTop5Genres(user2),
+        top_genres: user2TopGenres,
         top_artists: getTop5Items(user2.user_data.top_artists),
         top_songs: getTop5Items(user2.user_data.top_songs),
         recommended_artists: [
@@ -51,22 +56,7 @@ function matchMaker(user1, user2) {
       match_percent: compatibility,
     },
   };
+
   return responseObject;
 }
 module.exports = matchMaker;
-
-/*const comparisonObject = {
-  screen1: {
-    user1_image: user1.user_info.profile_img,
-    user2_image: user2.user_info.profile_img,
-    other_username: user2.user_info.username,
-  },
-  screen2: {
-    genres: matchedGenres.map((genreObj) => genreObj.genre),
-  },
-  screen3: { artist: matchedArtists },
-  screen4: { song: matchedSongs },
-  screen5: {
-    match: compatibility,
-  },
-};*/

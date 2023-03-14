@@ -1,7 +1,7 @@
 const SpotifyObject = require("../objects/SpotifyObject");
 
 function getGenres(genreArrays, parsedUser) {
-  let incrementedGenres = [];
+  let incrementedGenres = new Map();
   let totalGenres = 0;
   genreArrays.forEach((genreArray) => {
     genreArray.forEach((genre) => {
@@ -9,17 +9,13 @@ function getGenres(genreArrays, parsedUser) {
       totalGenres++;
     });
   });
-
-  incrementedGenres = Object.entries(incrementedGenres).sort(
-    (a, b) => b[1] - a[1]
-  );
   parsedUser.user_data.top_genres = incrementedGenres;
   parsedUser.user_data.total_genres = totalGenres;
 }
 
-function genreIncrementer(genre, genreArray) {
-  if (genreArray.hasOwnProperty(genre)) genreArray[genre] += 1;
-  else genreArray[genre] = 1;
+function genreIncrementer(genre, userMap) {
+  if (!userMap.has(genre)) userMap.set(genre, { val: 1 });
+  else userMap.get(genre).val++;
 }
 async function getUserInfo(spotifyApi, parsedUser) {
   const userInfo = await spotifyApi.getMe();
