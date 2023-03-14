@@ -1,7 +1,7 @@
 const OUR_GENRES = [
   "pop",
   "rock",
-  "hiphop",
+  "hip hop",
   "jazz",
   "blues",
   "funk",
@@ -54,14 +54,13 @@ const OUR_GENRES = [
 function boostGenres(userMap) {
   let addedGenres = 0;
   OUR_GENRES.forEach((genre) => {
-    userMap.forEach((item, key) => {
-      if (key.includes(genre)) {
-        item.val += 0.75;
+    userMap.forEach((genreArr) => {
+      if (genreArr[0].includes(genre)) {
+        genreArr[1] = parseInt(genreArr[1]) + 0.75;
         // addedGenres += 100;
       }
     });
   });
-
   return [addedGenres, userMap];
 }
 
@@ -76,25 +75,13 @@ function compare(user1, user2) {
 }
 
 function makeData({ user_data }) {
-  let totalGenres = 0;
-  const topArtists = user_data.top_artists;
-  const userMap = new Map();
-
-  topArtists.forEach(({ genres }) => {
-    genres.forEach((genre) => {
-      totalGenres++;
-      if (!userMap.has(genre)) userMap.set(genre, { val: 1 });
-      else userMap.get(genre).val++;
-    });
-  });
-
+  let totalGenres = user_data.total_genres;
+  let userMap = user_data.top_genres;
   const [addedGenres, newMap] = boostGenres(userMap);
   // totalGenres += addedGenres;
-
-  userMap.forEach((genre) => {
-    genre.val = genre.val / totalGenres;
+  userMap.forEach((genreArr) => {
+    genreArr[1] = genreArr[1] / totalGenres;
   });
-
   return userMap;
 }
 
