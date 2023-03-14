@@ -1,6 +1,6 @@
 import React from 'react';
 import './screen3.css';
-import sunBurst from '../../images/sun-burst.svg';
+import sunBurst from '../../images/sun-burst.png';
 
 function Screen3({ animationData }) {
 	return (

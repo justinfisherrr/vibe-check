@@ -14,9 +14,6 @@
     object-fit: cover;
 }
 
-.waves-top-no-match, .waves-bottom-no-match{
-    filter: invert(97%) sepia(3%) saturate(0%) hue-rotate(253deg) brightness(103%) contrast(103%);
-}
 
 .wave-bottom-container{
     width: 2800px;
@@ -32,4 +29,21 @@
     z-index: 0;
     width: 100%;
     object-fit: cover;
+}
+
+.waves-top-no-match, .waves-bottom-no-match, .waves-top-percent, .waves-bottom-percent{
+    filter: invert(97%) sepia(3%) saturate(0%) hue-rotate(253deg) brightness(103%) contrast(103%);
+    opacity: 0.15;
+}
+
+.fade-away{
+    animation: fade-away 0.8s ease-in-out 0.5s forwards;
+}
+
+@keyframes fade-away {
+    from{
+        opacity: 0.15;
+    }to{
+        opacity: 0;
+    }
 }

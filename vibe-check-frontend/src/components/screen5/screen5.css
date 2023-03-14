@@ -1,57 +1,49 @@
 /* screen 5 */
+:root{
+    --title-size: 40px
+}
+
+.animation-page-percent{
+    background-color: #72cfa9;
+}
+
 .screen5-content{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
-.animation-page-precent{
-    background-color: #96efb7;
+.percent-screen-title{
+    text-align: center;
+    font-size: var(--title-size);
+    line-height: calc(var(--title-size) + 2px);
+    text-transform: uppercase;
+    color: #1e4651;
+    z-index: 1;
 }
 
-.screen5-title{
-    color: rgb(255, 255, 255);
-    font-size: 75px;
-}
 
-.precent-wrapper{
-    height: 300px;
-    transform: translateY(-40px);
-    position: relative;
-}
-
-.percent{
-    font-size: 250px;
-    font-weight: 800;
-    color: white;
-    height: fit-content;
-}
-
-.small-percent{
-    font-size: 150px;
-}
-
-.burst{
-    position: absolute;
-    top: -50px;
-    opacity: 0.15;
-    animation: rotate 50s linear infinite ;
-    pointer-events: none;
-  }
-
-  @keyframes rotate {
-    0%   {
-        transform: scale(3) rotate(0deg);
+@media (min-width: 300px) {
+    :root{
+        --title-size: 45px
     }
-    100% {
-        transform: scale(3) rotate(360deg);
-    }
-  }
+}
 
-@media screen and (min-width: 400px){
-    .buttons{
-        margin-top: 20px;
+@media (min-width: 350px) {
+    :root{
+        --title-size: 50px
     }
-    
+}
+
+@media (min-width: 400px) {
+    :root{
+        --title-size: 60px
+    }
+}
+
+@media (min-width: 1000px) {
+    :root{
+        --title-size: 75px
+    }
 }

@@ -114,7 +114,7 @@ export default function useScreens() {
 		);
 	}
 
-	styles.push('precent');
+	styles.push('percent');
 	screens.push(<Screen5 animationData={animationData} />);
 
 	return [screens, styles];

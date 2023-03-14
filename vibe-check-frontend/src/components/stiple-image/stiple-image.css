@@ -29,3 +29,7 @@ filter: invert(88%) sepia(10%) saturate(5522%) hue-rotate(184deg) brightness(96%
 .stiple-img-songs, .stiple-img-but-here-songs, .stiple-img-recommended-songs {
     filter: invert(72%) sepia(4%) saturate(3225%) hue-rotate(190deg) brightness(122%) contrast(97%);
 }
+
+.stiple-img-percent{
+    filter: invert(21%) sepia(48%) saturate(639%) hue-rotate(146deg) brightness(87%) contrast(85%);
+}

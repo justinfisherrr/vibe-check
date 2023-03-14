@@ -1,18 +1,12 @@
 import React from 'react';
-import burst from '../../images/burst.png';
 import './screen5.css';
+import MatchPercent from '../match-percent/MatchPercent';
 
 function Screen5({ animationData }) {
 	return (
-		<div className='screen screen5-content'>
-			<h1 className='titles screen5-title'>MATCH PERCENT IS</h1>
-			<div className='precent-wrapper'>
-				<div className='percent'>
-					{animationData.match_profile.match_percent}
-					<span className='small-percent'>%</span>
-				</div>
-				<img className='burst' src={burst} alt='' />
-			</div>
+		<div className='screen5-content'>
+			<h1 className='percent-screen-title  fade-in'>Match Percent is</h1>
+			<MatchPercent animationData={animationData} />
 		</div>
 	);
 }

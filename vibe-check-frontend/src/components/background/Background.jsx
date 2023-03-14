@@ -10,24 +10,48 @@ import stipleBottomRight from '../../images/Stiple4.png';
 import star from '../../images/star.png';
 import wavesTop from '../../images/waves-top.svg';
 import wavesBottom from '../../images/waves-bottom.svg';
+import spinBurst from '../../images/spin-burst.svg';
 
 export default function Background({ children, currentScreen }) {
+	console.log(currentScreen);
 	return (
 		<div className='background-container'>
 			<div className='background-wrapper'>
+				{currentScreen === 'percent' && (
+					<div className='absolute spin-bursts-wrapper'>
+						<img
+							className='absolute spin-burst spin-burst-1'
+							src={spinBurst}
+							alt=''
+						/>
+						<img
+							className='absolute spin-burst spin-burst-2'
+							src={spinBurst}
+							alt=''
+						/>
+						<img
+							className='absolute spin-burst spin-burst-3'
+							src={spinBurst}
+							alt=''
+						/>
+					</div>
+				)}
+
 				<div className='absolute wave-top-container'>
 					<Waves
-						styles={`waves-top waves-top-${currentScreen}`}
+						styles={`waves-top waves-top-${currentScreen} ${
+							currentScreen === 'percent' ? 'fade-away' : ''
+						}`}
 						src={wavesTop}
 					/>
-					{/* <img className='waves-top' src={wavesTop} alt='' /> */}
 				</div>
 				<div className='absolute wave-bottom-container'>
 					<Waves
-						styles={`waves-bottom waves-bottom-${currentScreen}`}
+						styles={`waves-bottom waves-bottom-${currentScreen} ${
+							currentScreen === 'percent' ? 'fade-away' : ''
+						}`}
 						src={wavesBottom}
 					/>
-					{/* <img className='waves-bottom' src={wavesBottom} alt='' /> */}
 				</div>
 				<div className='absolute stiple-img-container-1'>
 					<StipleImage currentScreen={currentScreen} src={stipleBottomLeft} />
