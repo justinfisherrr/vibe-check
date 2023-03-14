@@ -1,5 +1,6 @@
 :root{
-    --spin-scale: 2.5
+    --spin-up-scale: 9;
+    --spin-down-scale: 2.5;
 }
 
 .background-container{
@@ -85,15 +86,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(4);
+    transform: scale(var(--spin-up-scale));
     animation: drop-in 0.8s ease-in-out 0.5s forwards;
 }
 
 @keyframes drop-in {
     from{
-        transform: scale(4);
+        transform: scale(var(--spin-up-scale));
     }to{
-        transform: scale(var(--spin-scale));
+        transform: scale(var(--spin-down-scale));
     }
 }
 
@@ -146,7 +147,8 @@
 
 @media screen and (min-width: 480px) {
     :root{
-        --spin-scale: 2
+        --spin-up-scale: 7;
+        --spin-down-scale: 2
     }
 
     .stiple-img-container-2{
@@ -169,7 +171,8 @@
 
 @media screen and (min-width: 650px) {
     :root{
-        --spin-scale: 1.5
+        --spin-up-scale: 6;
+        --spin-down-scale: 1.5
     }
 
     .stiple-img-container-1{
@@ -233,7 +236,8 @@
 
 @media screen and (min-width: 1000px) {
     :root{
-        --spin-scale: 1
+        --spin-up-scale: 4;
+        --spin-down-scale: 1
     }
 
     .stiple-img-container-1{
