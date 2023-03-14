@@ -1,4 +1,4 @@
-.animation-page-songs, .animation-page-but-here-songs{
+.animation-page-songs, .animation-page-but-here-songs, .animation-page-recommended-songs{
     background-color: #9a2f5a;
 }
 
@@ -18,8 +18,6 @@
 
 :root {
     --img-width: 90px;
-
-    
 
     --wrapper1-width: calc(var(--img-width) * 0.85 );
     --wrapper1-offset: calc(var(--wrapper1-width) * 0.75);

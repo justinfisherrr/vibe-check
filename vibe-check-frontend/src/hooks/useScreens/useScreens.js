@@ -27,11 +27,12 @@ export default function useScreens() {
 		'matching',
 		'genres',
 		'here',
-		'is',
-		'what',
+		'are',
+		'some',
 		'Artists',
 		animationData.users.user2.username,
-		'recommends',
+		'would',
+		'recommend',
 		'.',
 		'.',
 		'.',
@@ -46,10 +47,11 @@ export default function useScreens() {
 		'genres',
 		'here',
 		'is',
-		'what',
+		'some',
 		'Songs',
 		animationData.users.user2.username,
-		'recommends',
+		'would',
+		'recommend',
 		'.',
 		'.',
 		'.',
@@ -71,50 +73,45 @@ export default function useScreens() {
 
 		// Artists
 		if (animationData.match_profile.matching_artists.length === 0) {
-			styles.push('artists');
-			screens.push(<Screen3 animationData={animationData} />);
-
 			styles.push('no-match');
 			screens.push(
 				<NoMatches animationData={animationData} type={'Artists'} />
 			);
-
-			styles.push('but-here-artists');
-			screens.push(<ButHere type={'Artists'} words={artistsWords} />);
-
-			styles.push('recommended');
-			screens.push(<RecommendedArtists animationData={animationData} />);
 		} else {
 			styles.push('artists');
 			screens.push(<Screen3 animationData={animationData} />);
-
-			styles.push('but-here-artists');
-			screens.push(<ButHere type={'Artists'} words={artistsWords} />);
-
-			styles.push('recommended');
-			screens.push(<RecommendedArtists animationData={animationData} />);
 		}
+
+		styles.push('but-here-artists');
+		screens.push(<ButHere type={'Artists'} words={artistsWords} />);
+
+		styles.push('recommended-artists');
+		screens.push(
+			<RecommendedArtists
+				recommended={animationData.users.user2.recommended_artists}
+				type={'Artists'}
+			/>
+		);
 
 		// Songs
 		if (animationData.match_profile.matching_songs.length === 0) {
 			styles.push('no-match');
 			screens.push(<NoMatches animationData={animationData} type={'Songs'} />);
-
-			styles.push('but-here-songs');
-			screens.push(<ButHere words={songWords} type={'Songs'} />);
-
-			styles.push('recommended');
-			screens.push(<RecommendedSongs animationData={animationData} />);
 		} else {
 			styles.push('songs');
 			screens.push(<Screen4 animationData={animationData} />);
-
-			styles.push('but-here-songs');
-			screens.push(<ButHere words={songWords} type={'Songs'} />);
-
-			styles.push('recommended');
-			screens.push(<RecommendedSongs animationData={animationData} />);
 		}
+
+		styles.push('but-here-songs');
+		screens.push(<ButHere words={songWords} type={'Songs'} />);
+
+		styles.push('recommended-songs');
+		screens.push(
+			<RecommendedArtists
+				recommended={animationData.users.user2.recommended_songs}
+				type={'Songs'}
+			/>
+		);
 	}
 
 	styles.push('precent');

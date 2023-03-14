@@ -1,4 +1,4 @@
-.animation-page-recommended{
+.animation-page-recommended-artists{
     background-color: #8449a6;
 }
 
@@ -13,6 +13,10 @@
     margin-bottom: 20px;
     color: rgb(240, 217, 255);
     text-transform: uppercase;
+}
+
+.recommended-songs-title{
+    color: #ffd1eb;
 }
 
 .recommended-grid{
@@ -64,6 +68,8 @@
     display: flex;
     align-items: center;
     color: rgb(255, 222, 233);
+    display: flex;
+    justify-content: center;
 }
 
 .recommended-img-wrapper{
@@ -71,7 +77,6 @@
     width: 60px;
     overflow: hidden;
     position: relative;
-    
     border-radius: 5%;
 }
 
@@ -115,6 +120,34 @@
     font-size: 22px;
     font-weight: 700;
     color: rgb(255, 222, 233);
+}
+
+.recommended-song-index{
+    color: #dafbff;
+}
+
+.recommended-song-img-wrapper-0{border: 5px solid #1200ff;}
+.recommended-song-img-wrapper-1{border: 5px solid #f15aff;}
+.recommended-song-img-wrapper-2{border: 5px solid #6826b2;}
+.recommended-song-img-wrapper-3{border: 5px solid #d30f41;}
+.recommended-song-img-wrapper-4{border: 5px solid #e593bf;}
+
+.recommended-song-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: #dafbff;
+}
+
+.recommended-song-name{
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: 700;
+}
+
+.recommended-artist-name{
+font-size: 14px;
 }
 
 @keyframes slide-in-right {
@@ -174,6 +207,7 @@
 
     .recommended-index{
         font-size: 30px;
+        width: 50px;
     }
 
     .recommended-img-wrapper{
@@ -208,6 +242,15 @@
     .recommended-data{
         font-size: 25px;
     }
+
+    .recommended-song-name{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    
+    .recommended-artist-name{
+    font-size: 16px;
+    }
 }
 
 @media (min-width: 550px){
@@ -225,7 +268,13 @@
     }
 
     .recommended-item-wrapper{
-        grid-template-columns: 60px 90px 1fr;
+        grid-template-columns: 50px 90px 1fr;
+        column-gap: 20px;
+    }
+
+    .recommended-song-index{
+        font-size: 30px;
+        width: 50px;
     }
 
     .recommended-index{
@@ -240,4 +289,5 @@
     .recommended-data{
         font-size: 30px;
     }
+
 }
