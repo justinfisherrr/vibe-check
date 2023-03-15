@@ -6,7 +6,7 @@ function Screen4({ animationData }) {
 		<div className='screen4-content'>
 			<h1 className='screen4-title fade-in'>MATCHING SONGS ARE</h1>
 			<div className='artist-covers'>
-				{animationData.users.user2.recommended_songs.map(
+				{animationData.match_profile.matching_songs.map(
 					({ song_img }, index) => {
 						return (
 							<div
@@ -21,7 +21,7 @@ function Screen4({ animationData }) {
 			</div>
 
 			<div className='song-data song-fade-in'>
-				{animationData.users.user2.recommended_songs.map(
+				{animationData.match_profile.matching_songs.map(
 					({ song_name, artist_name }, index) => (
 						<div className='single-song-data-wrapper'>
 							<p className='song-index'>#{index + 1}</p>

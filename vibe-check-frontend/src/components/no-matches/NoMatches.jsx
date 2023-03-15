@@ -25,7 +25,9 @@ export default function NoMatches({ animationData, type }) {
 					return (
 						<span
 							key={index}
-							className='word fade-in'
+							className={`no-match-word fade-in ${
+								word === 'no' ? 'color-word-no' : ''
+							}`}
 							style={{ animationDelay: `${0.15 * index}s` }}>
 							{' '}
 							{word}
