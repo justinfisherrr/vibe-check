@@ -10,7 +10,7 @@ import stipleBottomRight from '../../images/Stiple4.png';
 import star from '../../images/star.png';
 import wavesTop from '../../images/waves-top.svg';
 import wavesBottom from '../../images/waves-bottom.svg';
-import spinBurst from '../../images/spin-burst.svg';
+import spinBurst from '../../images/spin-burst.png';
 
 export default function Background({ children, currentScreen }) {
 	console.log(currentScreen);

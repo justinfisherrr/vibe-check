@@ -1,5 +1,5 @@
 import React from 'react';
-import threeStar from '../../images/three-star.svg';
+import threeStar from '../../images/three-star.png';
 import './match-percent.css';
 
 export default function MatchPercent({ animationData }) {
